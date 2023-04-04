@@ -1,2 +1,2 @@
 # PedjoeangProject
-This is an Adventure RPG of Indonesia History
+This is an Adventure RPG of Indonesian History
