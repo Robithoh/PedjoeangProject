@@ -7,6 +7,10 @@ public class Player : MonoBehaviour
     private Animator anime;
     public float speed;
     public float rotationSpeed;
+
+    [SerializeField] 
+    private Transform cameraTransform;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +24,7 @@ public class Player : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
 
         Vector3 movement = new Vector3(horizontalInput, 0, verticalInput);
+        movement = Quaternion.AngleAxis(cameraTransform.rotation.eulerAngles.y, Vector3.up) * movement;
         movement.Normalize();
 
         transform.Translate(movement * speed * Time.deltaTime, Space.World);
@@ -35,6 +40,18 @@ public class Player : MonoBehaviour
         else
         {
             anime.SetBool("isMoving", false);
+        }
+    }
+
+    private void OnApplicationFocus(bool focus)
+    {
+        if (focus)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }
