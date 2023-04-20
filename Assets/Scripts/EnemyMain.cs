@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyCollision : MonoBehaviour
+public class EnemyMain : MonoBehaviour
 {
     private Animator animenemy;
     public GameObject myTarget;
