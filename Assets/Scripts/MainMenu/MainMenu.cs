@@ -4,14 +4,26 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
-{
+{   
+    public void Main_Menu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     public void PedjoeangSelection()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        SceneManager.LoadScene("PedjoeangSelection");
+    }
+    public void Pengaturan()
+    {
+        SceneManager.LoadScene("Pengaturan");
+    }
+    public void Tentang()
+    {
+        SceneManager.LoadScene("Tentang");
     }
     public void MainScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        SceneManager.LoadScene("MainScene");
     }
     public void Exit(){
         Application.Quit();
