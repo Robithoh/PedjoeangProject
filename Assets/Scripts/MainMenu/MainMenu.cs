@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {   
+    void Start()
+    {
+        MusicManager.Instance.ChangeMusic();
+    }
     public void Main_Menu()
     {
         SceneManager.LoadScene("MainMenu");
@@ -24,6 +28,7 @@ public class MainMenu : MonoBehaviour
     public void MainScene()
     {
         SceneManager.LoadScene("MainScene");
+        MusicManager.Instance.ChangeMusic();
     }
     public void Exit(){
         Application.Quit();
