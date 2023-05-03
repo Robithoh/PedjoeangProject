@@ -64,6 +64,7 @@ public class BattleHandler : MonoBehaviour {
             Instantiate(pfTroops, position, rotation);
         }
         Transform characterTransform = Instantiate(pfPangDip);
+
         CharacterBattle characterBattle = characterTransform.GetComponent<CharacterBattle>();
         characterBattle.Setup(isPlayerTeam);
 
