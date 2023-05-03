@@ -18,7 +18,7 @@ using CodeMonkey.Utils;
 
 public class CharacterBattle : MonoBehaviour {
 
-    private Character_Base characterBase;
+    /*private Character_Base characterBase;*/
     private State state;
     private Vector3 slideTargetPosition;
     private Action onSlideComplete;
@@ -34,7 +34,7 @@ public class CharacterBattle : MonoBehaviour {
     }
 
     private void Awake() {
-        characterBase = GetComponent<Character_Base>();
+        /*characterBase = GetComponent<Character_Base>();*/
         selectionCircleGameObject = transform.Find("SelectionCircle").gameObject;
         HideSelectionCircle();
         state = State.Idle;
@@ -46,11 +46,11 @@ public class CharacterBattle : MonoBehaviour {
     public void Setup(bool isPlayerTeam) {
         this.isPlayerTeam = isPlayerTeam;
         if (isPlayerTeam) {
-            characterBase.SetAnimsSwordTwoHandedBack();
-            characterBase.GetMaterial().mainTexture = BattleHandler.GetInstance().playerSpritesheet;
+            /*characterBase.SetAnimsSwordTwoHandedBack();
+            characterBase.GetMaterial().mainTexture = BattleHandler.GetInstance().playerSpritesheet;*/
         } else {
-            characterBase.SetAnimsSwordShield();
-            characterBase.GetMaterial().mainTexture = BattleHandler.GetInstance().enemySpritesheet;
+            /*characterBase.SetAnimsSwordShield();
+            characterBase.GetMaterial().mainTexture = BattleHandler.GetInstance().enemySpritesheet;*/
         }
         healthSystem = new HealthSystem(100);
         healthBar = new World_Bar(transform, new Vector3(0, 10), new Vector3(12, 1.7f), Color.grey, Color.red, 1f, 100, new World_Bar.Outline { color = Color.black, size = .6f });
@@ -65,9 +65,9 @@ public class CharacterBattle : MonoBehaviour {
 
     private void PlayAnimIdle() {
         if (isPlayerTeam) {
-            characterBase.PlayAnimIdle(new Vector3(+1, 0));
+            /*characterBase.PlayAnimIdle(new Vector3(+1, 0));*/
         } else {
-            characterBase.PlayAnimIdle(new Vector3(-1, 0));
+            /*characterBase.PlayAnimIdle(new Vector3(-1, 0));*/
         }
     }
 
@@ -100,15 +100,15 @@ public class CharacterBattle : MonoBehaviour {
         //CodeMonkey.CMDebug.TextPopup("Hit " + healthSystem.GetHealthAmount(), GetPosition());
         Vector3 dirFromAttacker = (GetPosition() - attacker.GetPosition()).normalized;
 
-        DamagePopup.Create(GetPosition(), damageAmount, false);
+        /*DamagePopup.Create(GetPosition(), damageAmount, false);
         characterBase.SetColorTint(new Color(1, 0, 0, 1f));
-        Blood_Handler.SpawnBlood(GetPosition(), dirFromAttacker);
+        Blood_Handler.SpawnBlood(GetPosition(), dirFromAttacker);*/
 
         CodeMonkey.Utils.UtilsClass.ShakeCamera(1f, .1f);
 
         if (healthSystem.IsDead()) {
             // Died
-            characterBase.PlayAnimLyingUp();
+            /*characterBase.PlayAnimLyingUp();*/
         }
     }
 
@@ -125,7 +125,7 @@ public class CharacterBattle : MonoBehaviour {
             // Arrived at Target, attack him
             state = State.Busy;
             Vector3 attackDir = (targetCharacterBattle.GetPosition() - GetPosition()).normalized;
-            characterBase.PlayAnimAttack(attackDir, () => {
+            /*characterBase.PlayAnimAttack(attackDir, () => {
                 // Target hit
                 int damageAmount = UnityEngine.Random.Range(20, 50);
                 targetCharacterBattle.Damage(this, damageAmount);
@@ -137,7 +137,7 @@ public class CharacterBattle : MonoBehaviour {
                     characterBase.PlayAnimIdle(attackDir);
                     onAttackComplete();
                 });
-            });
+            });*/
         });
     }
 
@@ -146,9 +146,9 @@ public class CharacterBattle : MonoBehaviour {
         this.onSlideComplete = onSlideComplete;
         state = State.Sliding;
         if (slideTargetPosition.x > 0) {
-            characterBase.PlayAnimSlideRight();
+            /*characterBase.PlayAnimSlideRight();*/
         } else {
-            characterBase.PlayAnimSlideLeft();
+            /*characterBase.PlayAnimSlideLeft();*/
         }
     }
 

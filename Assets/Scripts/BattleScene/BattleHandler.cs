@@ -11,9 +11,10 @@ public class BattleHandler : MonoBehaviour {
     }
 
 
-    [SerializeField] private Transform pfCharacterBattle;
-    public Texture2D playerSpritesheet;
-    public Texture2D enemySpritesheet;
+    [SerializeField] private Transform pfPangDip;
+    [SerializeField] private Transform pfTroops;
+    /*public Texture2D playerSpritesheet;
+    public Texture2D enemySpritesheet;*/
 
     private CharacterBattle playerCharacterBattle;
     private CharacterBattle enemyCharacterBattle;
@@ -50,12 +51,20 @@ public class BattleHandler : MonoBehaviour {
 
     private CharacterBattle SpawnCharacter(bool isPlayerTeam) {
         Vector3 position;
-        if (isPlayerTeam) {
-            position = new Vector3(-50, 0);
-        } else {
-            position = new Vector3(+50, 0);
+        Quaternion rotation;
+        if (isPlayerTeam)
+        {
+            position = new Vector3(-3, 0);
+            rotation = Quaternion.Euler(new Vector3(0, 90, 0));
+            Instantiate(pfPangDip, position, rotation);
         }
-        Transform characterTransform = Instantiate(pfCharacterBattle, position, Quaternion.identity);
+        else
+        {
+            position = new Vector3(3, 0);
+            rotation = Quaternion.Euler(new Vector3(0, -90, 0));
+            Instantiate(pfTroops, position, rotation);
+        }
+        Transform characterTransform = Instantiate(pfPangDip, position, Quaternion.identity);
         CharacterBattle characterBattle = characterTransform.GetComponent<CharacterBattle>();
         characterBattle.Setup(isPlayerTeam);
 
