@@ -56,7 +56,6 @@ public class BattleHandler : MonoBehaviour {
         {
             position = new Vector3(-3, 0);
             rotation = Quaternion.Euler(new Vector3(0, 90, 0));
-            Instantiate(pfPangDip, position, rotation);
         }
         else
         {
@@ -64,7 +63,7 @@ public class BattleHandler : MonoBehaviour {
             rotation = Quaternion.Euler(new Vector3(0, -90, 0));
             Instantiate(pfTroops, position, rotation);
         }
-        Transform characterTransform = Instantiate(pfPangDip, position, Quaternion.identity);
+        Transform characterTransform = Instantiate(pfPangDip);
         CharacterBattle characterBattle = characterTransform.GetComponent<CharacterBattle>();
         characterBattle.Setup(isPlayerTeam);
 
