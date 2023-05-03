@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CodeMonkey.Utils;
+using Random = UnityEngine.Random;
 
 public class CharacterBattle : MonoBehaviour
 {
@@ -136,7 +137,7 @@ public class CharacterBattle : MonoBehaviour
             Vector3 attackDir = (targetCharacterBattle.GetPosition() - GetPosition()).normalized;
             characterBase.PlayAnimAttack(attackDir, () => {
                 // Target hit
-                int damageAmount = 5;
+                int damageAmount = 4;
                 targetCharacterBattle.Damage(this, damageAmount);
             }, () => {
                 // Attack completed, slide back
@@ -214,7 +215,7 @@ public class CharacterBattle : MonoBehaviour
             Vector3 attackDir = (targetCharacterBattle.GetPosition() - GetPosition()).normalized;
             characterBase.PlayAnimAttack(attackDir, () => {
                 // Target hit
-                int damageAmount = 10;
+                int damageAmount = Random.Range(4,10);
                 targetCharacterBattle.Damage(this, damageAmount);
             }, () => {
                 // Attack completed, slide back

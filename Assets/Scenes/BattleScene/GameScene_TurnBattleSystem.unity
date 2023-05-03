@@ -566,8 +566,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pfCharacterBattle: {fileID: 7721603974982762705, guid: f1f57204e3c9d3b4d8de220bf844658e, type: 3}
-  playerSpritesheet: {fileID: 2800000, guid: 7d3b541f0e505e94c8e809b20b904c0d, type: 3}
-  enemySpritesheet: {fileID: 2800000, guid: 708ddba10751e1b40b6afd12dc913880, type: 3}
+  playerSpritesheet: {fileID: 2800000, guid: c9ad21ce568fefd488a760a8c9b5941a, type: 3}
+  enemySpritesheet: {fileID: 2800000, guid: 7d3b541f0e505e94c8e809b20b904c0d, type: 3}
 --- !u!4 &622812125
 Transform:
   m_ObjectHideFlags: 0
@@ -1171,15 +1171,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -90
-  m_Sprite: {fileID: 21300000, guid: 55e18b0a3901e5f4b98dffc1c5938ae7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3cd49d0c48ef6734ebd425ce0126bd17, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 1500, y: 1000}
+  m_Size: {x: 3840, y: 210}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1325846906
@@ -1389,7 +1389,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1402375686}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7.1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1760180116}
@@ -1435,12 +1435,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -100
-  m_Sprite: {fileID: 21300000, guid: 89f3d7d5f6ae2d248acdf86e3881d599, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 1500, y: 1000}
+  m_Size: {x: 40.96, y: 27.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
