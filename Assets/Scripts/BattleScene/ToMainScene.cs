@@ -5,17 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class ToMainScene : MonoBehaviour
 {
-    private int sceneToContinue;
+    public string lastSceneName;
 
     public void ContinueMainScene()
     {
-        sceneToContinue = PlayerPrefs.GetInt("SavedScene");
+        // sceneToContinue = PlayerPrefs.GetInt("SavedScene");
 
-        Debug.Log("Scene to continue: " + sceneToContinue);
+        // Debug.Log("Scene to continue: " + sceneToContinue);
 
-        if (sceneToContinue != 2)
-            SceneManager.LoadSceneAsync(sceneToContinue);
-        else
-            return;
+        // if (sceneToContinue != 2)
+        //     SceneManager.LoadSceneAsync(sceneToContinue);
+        // else
+        //     return;
+
+        if (SceneManager.GetSceneByName(lastSceneName).isLoaded)
+        {
+            SceneManager.UnloadSceneAsync(lastSceneName);
+        }
     }
 }
