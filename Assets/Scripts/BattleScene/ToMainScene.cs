@@ -11,8 +11,10 @@ public class ToMainScene : MonoBehaviour
     {
         sceneToContinue = PlayerPrefs.GetInt("SavedScene");
 
-        if (sceneToContinue != 0)
-            SceneManager.LoadScene(sceneToContinue);
+        Debug.Log("Scene to continue: " + sceneToContinue);
+
+        if (sceneToContinue != 2)
+            SceneManager.LoadSceneAsync(sceneToContinue);
         else
             return;
     }

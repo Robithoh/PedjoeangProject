@@ -8,22 +8,27 @@ public class SceneChange : MonoBehaviour
     private int currentSceneIndex;
 
     // on trigger enter to change scene
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            // saved Scene
-            currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            PlayerPrefs.SetInt("SavedScene", currentSceneIndex);
-
             // change scene
-            UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene_TurnBattleSystem");
+            UnityEngine.SceneManagement.SceneManager.LoadSceneAsync("BattleScene1");
 
             // Visible Cursor
             Cursor.visible = true;
             
             // unLock Cursor
             Cursor.lockState = CursorLockMode.None;
+
+            // saved Scene
+            currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            PlayerPrefs.SetInt("SavedScene", currentSceneIndex);
+
+            Debug.Log("Scene Saved: " + currentSceneIndex);
+
+            // Destroy GameObject
+            Destroy(gameObject);
         }
         
     }
