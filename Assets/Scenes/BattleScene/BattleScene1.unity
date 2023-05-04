@@ -424,7 +424,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 214195469}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 622812124}
+        m_TargetAssemblyTypeName: BattleHandler, Assembly-CSharp
+        m_MethodName: skill3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &214195469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -895,7 +907,7 @@ GameObject:
   - component: {fileID: 554223380}
   - component: {fileID: 554223379}
   - component: {fileID: 554223378}
-  - component: {fileID: 554223381}
+  - component: {fileID: 554223382}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -985,7 +997,7 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &554223381
+--- !u!114 &554223382
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -994,10 +1006,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 554223376}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e2ede2f51fafd24fbec52cf06757e93, type: 3}
+  m_Script: {fileID: 11500000, guid: 5238dceeb18f8e6458b15583211535c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextSceneName: 
   lastSceneName: BattleScene1
+  Hide_Panel: {fileID: 0}
 --- !u!1 &622812123
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,7 +1290,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 649614809}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 622812124}
+        m_TargetAssemblyTypeName: BattleHandler, Assembly-CSharp
+        m_MethodName: skill1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &649614809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2170,17 +2196,17 @@ MonoBehaviour:
   maxDefense: 20
   maxhealth: 120
   skill1Ranking:
-  - 90
-  - 90
-  - 90
+  - 3
+  - 3
+  - 3
   skill2Ranking:
-  - 60
-  - 90
-  - 80
+  - 1
+  - 1
+  - 1
   skill3Ranking:
-  - 90
-  - 80
-  - 70
+  - 2
+  - 2
+  - 2
   teks: {fileID: 771935431}
 --- !u!1 &1325846906
 GameObject:
@@ -2608,8 +2634,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 554223381}
-        m_TargetAssemblyTypeName: ToMainScene, Assembly-CSharp
+      - m_Target: {fileID: 554223382}
+        m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
         m_MethodName: ContinueMainScene
         m_Mode: 1
         m_Arguments:
@@ -2851,7 +2877,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1608005877}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 622812124}
+        m_TargetAssemblyTypeName: BattleHandler, Assembly-CSharp
+        m_MethodName: skill2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1608005877
 MonoBehaviour:
   m_ObjectHideFlags: 0

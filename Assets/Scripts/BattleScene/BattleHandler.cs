@@ -44,30 +44,30 @@ public class BattleHandler : MonoBehaviour
 
     private void Update()
     {
-        if (state == State.WaitingForPlayer)
-        {
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                state = State.Busy;
-                playerCharacterBattle.AllyAttack1(enemyCharacterBattle, () => {
-                    ChooseNextActiveCharacter();
-                });
-            }
-            else if (Input.GetKeyDown(KeyCode.W))
-            {
-                state = State.Busy;
-                playerCharacterBattle.AllyAttack2(enemyCharacterBattle, () => {
-                    ChooseNextActiveCharacter();
-                });
-            }
-            else if (Input.GetKeyDown(KeyCode.E))
-            {
-                state = State.Busy;
-                playerCharacterBattle.AllyAttack3(enemyCharacterBattle, () => {
-                    ChooseNextActiveCharacter();
-                });
-            }
-        }
+        // if (state == State.WaitingForPlayer)
+        // {
+        //     if (Input.GetKeyDown(KeyCode.Q))
+        //     {
+        //         state = State.Busy;
+        //         playerCharacterBattle.AllyAttack1(enemyCharacterBattle, () => {
+        //             ChooseNextActiveCharacter();
+        //         });
+        //     }
+        //     else if (Input.GetKeyDown(KeyCode.W))
+        //     {
+        //         state = State.Busy;
+        //         playerCharacterBattle.AllyAttack2(enemyCharacterBattle, () => {
+        //             ChooseNextActiveCharacter();
+        //         });
+        //     }
+        //     else if (Input.GetKeyDown(KeyCode.E))
+        //     {
+        //         state = State.Busy;
+        //         playerCharacterBattle.AllyAttack3(enemyCharacterBattle, () => {
+        //             ChooseNextActiveCharacter();
+        //         });
+        //     }
+        // }
     }
 
     private CharacterBattle SpawnCharacter(bool isPlayerTeam)
@@ -140,5 +140,36 @@ public class BattleHandler : MonoBehaviour
         }
 
         return false;
+    }
+
+    public void skill1()
+    {
+        if (state == State.WaitingForPlayer)
+        {
+            state = State.Busy;
+            playerCharacterBattle.AllyAttack1(enemyCharacterBattle, () => {
+                ChooseNextActiveCharacter();
+            });
+        }
+    }
+    public void skill2()
+    {
+        if (state == State.WaitingForPlayer)
+        {
+            state = State.Busy;
+            playerCharacterBattle.AllyAttack2(enemyCharacterBattle, () => {
+                ChooseNextActiveCharacter();
+            });
+        }
+    }
+    public void skill3()
+    {
+        if (state == State.WaitingForPlayer)
+        {
+            state = State.Busy;
+            playerCharacterBattle.AllyAttack3(enemyCharacterBattle, () => {
+                ChooseNextActiveCharacter();
+            });
+        }
     }
 }

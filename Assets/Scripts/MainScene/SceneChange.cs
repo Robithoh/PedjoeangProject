@@ -8,6 +8,8 @@ public class SceneChange : MonoBehaviour
     private int currentSceneIndex;
 
     public string nextSceneName;
+    public string lastSceneName;
+
     public static bool loaaad;
     public GameObject Hide_Panel;
 
@@ -32,15 +34,68 @@ public class SceneChange : MonoBehaviour
             SceneManager.LoadScene(nextSceneName, LoadSceneMode.Additive);
             loaaad = true;
             
-            // Hide Panel
-            if (Hide_Panel != null)
-            {
-                Hide_Panel.SetActive(false);
-            }
+            hide_gameobject();
 
             // Destroy GameObject
             Destroy(gameObject);
+
+        }  
+    }
+
+    public void ContinueMainScene()
+    {
+        // sceneToContinue = PlayerPrefs.GetInt("SavedScene");
+
+        // Debug.Log("Scene to continue: " + sceneToContinue);
+
+        // if (sceneToContinue != 2)
+        //     SceneManager.LoadSceneAsync(sceneToContinue);
+        // else
+        //     return;
+
+        if (SceneManager.GetSceneByName(lastSceneName).isLoaded)
+        {
+            SceneManager.UnloadSceneAsync(lastSceneName);
         }
-        
+
+        // inVisible Cursor
+        Cursor.visible = false;
+        // Lock Cursor
+        Cursor.lockState = CursorLockMode.Locked;
+
+        show_gameobject();
+    }
+
+    public void hide_gameobject()
+    {
+        if (Hide_Panel != null)
+        {
+            Hide_Panel.SetActive(false);
+        }
+    }
+
+    public void show_gameobject()
+    {
+        if (Hide_Panel == null)
+        {
+            Hide_Panel.SetActive(true);
+        }
+    }
+
+    void Start()
+    {
+        if (Hide_Panel == null)
+        {
+            Hide_Panel.SetActive(true);
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            Hide_Panel.SetActive(true);
+        } 
     }
 }
