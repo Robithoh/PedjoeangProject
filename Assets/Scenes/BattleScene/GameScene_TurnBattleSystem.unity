@@ -1015,7 +1015,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pfCharacterBattle: {fileID: 7721603974982762705, guid: f1f57204e3c9d3b4d8de220bf844658e, type: 3}
   playerSpritesheet: {fileID: 2800000, guid: c9ad21ce568fefd488a760a8c9b5941a, type: 3}
-  enemySpritesheet: {fileID: 2800000, guid: 7d3b541f0e505e94c8e809b20b904c0d, type: 3}
+  enemySpritesheet: {fileID: 2800000, guid: 708ddba10751e1b40b6afd12dc913880, type: 3}
 --- !u!4 &622812125
 Transform:
   m_ObjectHideFlags: 0
@@ -2523,6 +2523,7 @@ GameObject:
   - component: {fileID: 1488835493}
   - component: {fileID: 1488835492}
   - component: {fileID: 1488835491}
+  - component: {fileID: 1488835494}
   m_Layer: 0
   m_Name: Button (3)
   m_TagString: Untagged
@@ -2593,7 +2594,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1488835492}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1488835494}
+        m_TargetAssemblyTypeName: ToMainScene, Assembly-CSharp
+        m_MethodName: ContinueMainScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1488835492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2632,6 +2645,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1488835489}
   m_CullTransparentMesh: 1
+--- !u!114 &1488835494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488835489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e2ede2f51fafd24fbec52cf06757e93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1499748900
 GameObject:
   m_ObjectHideFlags: 0
