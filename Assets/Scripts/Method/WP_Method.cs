@@ -59,19 +59,19 @@ public class WP_Method : MonoBehaviour
         if (skill1Value > skill2Value && skill1Value > skill3Value)
         {
             Debug.Log("Pilih Skill 1");
-            teks.text = "Pilih Archer";
+            teks.text = "Karena Musuhnya Portugese Lieutenant maka lebih efektif menggunakan Skill 1";
             // Lakukan aksi untuk memilih skill skill1
         }
         else if (skill2Value > skill1Value && skill2Value > skill3Value)
         {
             Debug.Log("Pilih Skill 2");
-            teks.text = "Pilih Swordsman";
+            teks.text = "Karena Musuhnya Portugese Corporal maka lebih efektif menggunakan Skill 2";
             // Lakukan aksi untuk memilih skill skill2
         }
         else
         {
             Debug.Log("Pilih Skill 3");
-            teks.text = "Pilih Wizard";
+            teks.text = "Karena Musuhnya Portugese Captain maka lebih efektif menggunakan Skill 3";
             // Lakukan aksi untuk memilih skill skill3
         }
     }
