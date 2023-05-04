@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WP_Method : MonoBehaviour
+public class WP_Method_Skill_1 : MonoBehaviour
 {
     // Alternatif
     public float attackWeight;
