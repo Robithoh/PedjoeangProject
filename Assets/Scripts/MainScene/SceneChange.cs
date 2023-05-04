@@ -11,6 +11,12 @@ public class SceneChange : MonoBehaviour
         {
             // change scene
             UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene_TurnBattleSystem");
+
+            // Visible Cursor
+            Cursor.visible = true;
+            
+            // unLock Cursor
+            Cursor.lockState = CursorLockMode.None;
         }
         
     }
