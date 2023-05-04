@@ -50,7 +50,7 @@ public class CharacterBattle : MonoBehaviour
             characterBase.SetAnimsSwordShield();
             characterBase.GetMaterial().mainTexture = BattleHandler.GetInstance().enemySpritesheet;
             int maxhealth = 100;
-            int defense = 20;
+            int defense = 0;
             healthSystem = new HealthSystem(maxhealth + defense);
         }
         

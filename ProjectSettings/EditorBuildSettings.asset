@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu/MainMenu.unity
     guid: 6b6838d244e527e42b47ec61f4942673
   - enabled: 1
-    path: Assets/Scenes/BattleScene/GameScene_TurnBattleSystem.unity
+    path: Assets/Scenes/BattleScene/BattleScene1.unity
     guid: c148f78900d5bee4ebbb8533ccb33202
   - enabled: 1
     path: Assets/Scenes/Menu/PedjoeangSelection.unity
