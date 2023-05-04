@@ -43,13 +43,17 @@ public class CharacterBattle : MonoBehaviour
         {
             characterBase.SetAnimsSwordShield();
             characterBase.GetMaterial().mainTexture = BattleHandler.GetInstance().playerSpritesheet;
+            healthSystem = new HealthSystem(100);
         }
         else
         {
             characterBase.SetAnimsSwordShield();
             characterBase.GetMaterial().mainTexture = BattleHandler.GetInstance().enemySpritesheet;
+            int maxhealth = 100;
+            int defense = 20;
+            healthSystem = new HealthSystem(maxhealth + defense);
         }
-        healthSystem = new HealthSystem(50);
+        
         healthBar = new World_Bar(transform, new Vector3(0, 10), new Vector3(12, 1.7f), Color.grey, Color.red, 1f, 100, new World_Bar.Outline { color = Color.black, size = .6f });
         healthSystem.OnHealthChanged += HealthSystem_OnHealthChanged;
 
