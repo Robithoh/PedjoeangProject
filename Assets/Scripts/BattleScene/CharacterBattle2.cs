@@ -129,20 +129,20 @@ public class CharacterBattle2 : MonoBehaviour
         return healthSystem.IsDead();
     }
 
-    public void AllyAttack1(CharacterBattle2 targetCharacterBattle2, Action onAttackComplete)
+    public void AllyAttack1(CharacterBattle2 targetCharacterBattle, Action onAttackComplete)
     {
-        Vector3 slideTargetPosition = targetCharacterBattle2.GetPosition() + (GetPosition() - targetCharacterBattle2.GetPosition()).normalized * 10f;
+        Vector3 slideTargetPosition = targetCharacterBattle.GetPosition() + (GetPosition() - targetCharacterBattle.GetPosition()).normalized * 10f;
         Vector3 startingPosition = GetPosition();
 
         // Slide to Target
         SlideToPosition(slideTargetPosition, () => {
             // Arrived at Target, attack him
             state = State.Busy;
-            Vector3 attackDir = (targetCharacterBattle2.GetPosition() - GetPosition()).normalized;
+            Vector3 attackDir = (targetCharacterBattle.GetPosition() - GetPosition()).normalized;
             characterBase.PlayAnimAttack(attackDir, () => {
                 // Target hit
                 int damageAmount = 4;
-                targetCharacterBattle2.Damage(this, damageAmount);
+                targetCharacterBattle.Damage(this, damageAmount);
             }, () => {
                 // Attack completed, slide back
                 SlideToPosition(startingPosition, () => {
@@ -155,20 +155,20 @@ public class CharacterBattle2 : MonoBehaviour
         });
     }
 
-    public void AllyAttack2(CharacterBattle2 targetCharacterBattle2, Action onAttackComplete)
+    public void AllyAttack2(CharacterBattle2 targetCharacterBattle, Action onAttackComplete)
     {
-        Vector3 slideTargetPosition = targetCharacterBattle2.GetPosition() + (GetPosition() - targetCharacterBattle2.GetPosition()).normalized * 10f;
+        Vector3 slideTargetPosition = targetCharacterBattle.GetPosition() + (GetPosition() - targetCharacterBattle.GetPosition()).normalized * 10f;
         Vector3 startingPosition = GetPosition();
 
         // Slide to Target
         SlideToPosition(slideTargetPosition, () => {
             // Arrived at Target, attack him
             state = State.Busy;
-            Vector3 attackDir = (targetCharacterBattle2.GetPosition() - GetPosition()).normalized;
+            Vector3 attackDir = (targetCharacterBattle.GetPosition() - GetPosition()).normalized;
             characterBase.PlayAnimAttack(attackDir, () => {
                 // Target hit
                 int damageAmount = 7;
-                targetCharacterBattle2.Damage(this, damageAmount);
+                targetCharacterBattle.Damage(this, damageAmount);
             }, () => {
                 // Attack completed, slide back
                 SlideToPosition(startingPosition, () => {
@@ -181,20 +181,20 @@ public class CharacterBattle2 : MonoBehaviour
         });
     }
 
-    public void AllyAttack3(CharacterBattle2 targetCharacterBattle2, Action onAttackComplete)
+    public void AllyAttack3(CharacterBattle2 targetCharacterBattle, Action onAttackComplete)
     {
-        Vector3 slideTargetPosition = targetCharacterBattle2.GetPosition() + (GetPosition() - targetCharacterBattle2.GetPosition()).normalized * 10f;
+        Vector3 slideTargetPosition = targetCharacterBattle.GetPosition() + (GetPosition() - targetCharacterBattle.GetPosition()).normalized * 10f;
         Vector3 startingPosition = GetPosition();
 
         // Slide to Target
         SlideToPosition(slideTargetPosition, () => {
             // Arrived at Target, attack him
             state = State.Busy;
-            Vector3 attackDir = (targetCharacterBattle2.GetPosition() - GetPosition()).normalized;
+            Vector3 attackDir = (targetCharacterBattle.GetPosition() - GetPosition()).normalized;
             characterBase.PlayAnimAttack(attackDir, () => {
                 // Target hit
                 int damageAmount = 10;
-                targetCharacterBattle2.Damage(this, damageAmount);
+                targetCharacterBattle.Damage(this, damageAmount);
             }, () => {
                 // Attack completed, slide back
                 SlideToPosition(startingPosition, () => {
@@ -207,20 +207,20 @@ public class CharacterBattle2 : MonoBehaviour
         });
     }
 
-    public void EnemyAttack(CharacterBattle2 targetCharacterBattle2, Action onAttackComplete)
+    public void EnemyAttack(CharacterBattle2 targetCharacterBattle, Action onAttackComplete)
     {
-        Vector3 slideTargetPosition = targetCharacterBattle2.GetPosition() + (GetPosition() - targetCharacterBattle2.GetPosition()).normalized * 10f;
+        Vector3 slideTargetPosition = targetCharacterBattle.GetPosition() + (GetPosition() - targetCharacterBattle.GetPosition()).normalized * 10f;
         Vector3 startingPosition = GetPosition();
 
         // Slide to Target
         SlideToPosition(slideTargetPosition, () => {
             // Arrived at Target, attack him
             state = State.Busy;
-            Vector3 attackDir = (targetCharacterBattle2.GetPosition() - GetPosition()).normalized;
+            Vector3 attackDir = (targetCharacterBattle.GetPosition() - GetPosition()).normalized;
             characterBase.PlayAnimAttack(attackDir, () => {
                 // Target hit
                 int damageAmount = Random.Range(4, 10);
-                targetCharacterBattle2.Damage(this, damageAmount);
+                targetCharacterBattle.Damage(this, damageAmount);
             }, () => {
                 // Attack completed, slide back
                 SlideToPosition(startingPosition, () => {
