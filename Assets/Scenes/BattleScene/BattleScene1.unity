@@ -1011,7 +1011,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextSceneName: 
   lastSceneName: BattleScene1
+  gameObj: {fileID: 7721603974982762702, guid: f1f57204e3c9d3b4d8de220bf844658e, type: 3}
   Hide_Panel: {fileID: 0}
+  Hide_Panel1: {fileID: 0}
+  Hide_Panel2: {fileID: 0}
+  Hide_Panel3: {fileID: 0}
 --- !u!1 &622812123
 GameObject:
   m_ObjectHideFlags: 0

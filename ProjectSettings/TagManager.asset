@@ -9,6 +9,7 @@ TagManager:
   - MusicMainScene
   - MusicSlider
   - UI
+  - PrefabDestroy
   layers:
   - Default
   - TransparentFX

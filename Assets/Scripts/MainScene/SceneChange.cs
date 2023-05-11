@@ -11,6 +11,7 @@ public class SceneChange : MonoBehaviour
     public string lastSceneName;
 
     public static bool loaaad;
+    public GameObject gameObj;
     public GameObject Hide_Panel;
     public GameObject Hide_Panel1;
     public GameObject Hide_Panel2;
@@ -111,6 +112,7 @@ public class SceneChange : MonoBehaviour
             Hide_Panel1.SetActive(true);
             Hide_Panel2.SetActive(true);
             Hide_Panel3.SetActive(true);
+            Destroy(gameObj);
         } 
     }
 }
