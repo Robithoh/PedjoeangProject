@@ -6,8 +6,9 @@ public class DestroyObj : MonoBehaviour
 {
     public GameObject gameObj;
 
-    void Start()
-    {
-        Destroy(gameObj, 3);
+    public void Update() {
+        if(Input.GetKeyDown(KeyCode.W)){
+            Destroy(gameObj);
+        }
     }
 }
