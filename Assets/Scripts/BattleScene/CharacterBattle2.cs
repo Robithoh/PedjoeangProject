@@ -133,7 +133,7 @@ public class CharacterBattle2 : MonoBehaviour
         return healthSystem.IsDead();
     }
 
-        public void AllyAttack1(CharacterBattle targetCharacterBattle, Action onAttackComplete)
+        public void AllyAttack1(CharacterBattle2 targetCharacterBattle, Action onAttackComplete)
     {
         Vector3 slideTargetPosition = targetCharacterBattle.GetPosition() + (GetPosition() - targetCharacterBattle.GetPosition()).normalized * 10f;
         Vector3 startingPosition = GetPosition();
@@ -159,7 +159,7 @@ public class CharacterBattle2 : MonoBehaviour
         });
     }
 
-    public void AllyAttack2(CharacterBattle targetCharacterBattle, Action onAttackComplete)
+    public void AllyAttack2(CharacterBattle2 targetCharacterBattle, Action onAttackComplete)
     {
         Vector3 slideTargetPosition = targetCharacterBattle.GetPosition() + (GetPosition() - targetCharacterBattle.GetPosition()).normalized * 10f;
         Vector3 startingPosition = GetPosition();
@@ -185,7 +185,7 @@ public class CharacterBattle2 : MonoBehaviour
         });
     }
 
-    public void AllyAttack3(CharacterBattle targetCharacterBattle, Action onAttackComplete)
+    public void AllyAttack3(CharacterBattle2 targetCharacterBattle, Action onAttackComplete)
     {
         Vector3 slideTargetPosition = targetCharacterBattle.GetPosition() + (GetPosition() - targetCharacterBattle.GetPosition()).normalized * 10f;
         Vector3 startingPosition = GetPosition();
