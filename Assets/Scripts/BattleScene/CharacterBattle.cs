@@ -17,6 +17,10 @@ public class CharacterBattle : MonoBehaviour
     private HealthSystem healthSystem;
     private World_Bar healthBar;
 
+    public int damage1;
+    public int damage2;
+    public int damage3;
+
     private enum State
     {
         Idle,
@@ -141,7 +145,7 @@ public class CharacterBattle : MonoBehaviour
             Vector3 attackDir = (targetCharacterBattle.GetPosition() - GetPosition()).normalized;
             characterBase.PlayAnimAttack(attackDir, () => {
                 // Target hit
-                int damageAmount = 20;
+                int damageAmount = damage1;
                 targetCharacterBattle.Damage(this, damageAmount);
             }, () => {
                 // Attack completed, slide back
@@ -167,7 +171,7 @@ public class CharacterBattle : MonoBehaviour
             Vector3 attackDir = (targetCharacterBattle.GetPosition() - GetPosition()).normalized;
             characterBase.PlayAnimAttack(attackDir, () => {
                 // Target hit
-                int damageAmount = 7;
+                int damageAmount = damage2;
                 targetCharacterBattle.Damage(this, damageAmount);
             }, () => {
                 // Attack completed, slide back
@@ -193,7 +197,7 @@ public class CharacterBattle : MonoBehaviour
             Vector3 attackDir = (targetCharacterBattle.GetPosition() - GetPosition()).normalized;
             characterBase.PlayAnimAttack(attackDir, () => {
                 // Target hit
-                int damageAmount = 10;
+                int damageAmount = damage3;
                 targetCharacterBattle.Damage(this, damageAmount);
             }, () => {
                 // Attack completed, slide back
