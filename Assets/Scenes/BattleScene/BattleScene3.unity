@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -400,24 +400,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a0d92535fe16684883b1d16cc5ae93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackWeight: 10
+  attackWeight: 50
   defenseWeight: 20
   healthWeight: 100
-  maxAttack: 10
+  maxAttack: 50
   maxDefense: 20
-  maxhealth: 120
+  maxhealth: 100
   skill1Ranking:
-  - 90
-  - 90
-  - 90
+  - 1
+  - 1
+  - 1
   skill2Ranking:
-  - 60
-  - 90
-  - 80
+  - 2
+  - 2
+  - 2
   skill3Ranking:
-  - 90
-  - 80
-  - 70
+  - 3
+  - 3
+  - 3
   teks: {fileID: 1505046657}
 --- !u!114 &246797508
 MonoBehaviour:
@@ -1800,7 +1800,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Musuh : Portugese Lieutenant'
+  m_Text: 'Musuh : Jenderal De Kock'
 --- !u!222 &906484197
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -256,7 +256,7 @@ public class CharacterBattle : MonoBehaviour
             Vector3 attackDir = (targetCharacterBattle.GetPosition() - GetPosition()).normalized;
             characterBase.PlayAnimAttack(attackDir, () => {
                 // Target hit
-                int damageAmount = Random.Range(4,10);
+                int damageAmount = Random.Range(10,20);
                 targetCharacterBattle.Damage(this, damageAmount);
             }, () => {
                 // Attack completed, slide back

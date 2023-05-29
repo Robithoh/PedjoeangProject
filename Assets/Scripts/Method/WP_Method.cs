@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WP_Method_Skill_1 : MonoBehaviour
+public class WP_Method : MonoBehaviour
 {
     // Alternatif
     public float attackWeight;
@@ -65,13 +65,13 @@ public class WP_Method_Skill_1 : MonoBehaviour
         else if (skill2Value > skill1Value && skill2Value > skill3Value)
         {
             Debug.Log("Pilih Skill 2");
-            teks.text = "Karena Musuhnya Portugese Corporal maka lebih efektif menggunakan Skill 2";
+            teks.text = "Karena Musuhnya Portugese Captain maka lebih efektif menggunakan Skill 2";
             // Lakukan aksi untuk memilih skill skill2
         }
         else
         {
             Debug.Log("Pilih Skill 3");
-            teks.text = "Karena Musuhnya Portugese Captain maka lebih efektif menggunakan Skill 3";
+            teks.text = "Karena Musuhnya Jenderal DeKock maka lebih efektif menggunakan Skill 3";
             // Lakukan aksi untuk memilih skill skill3
         }
     }
