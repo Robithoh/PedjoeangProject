@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -605,7 +605,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1071774370}
+      - m_Target: {fileID: 1071774368}
         m_TargetAssemblyTypeName: BattleHandler, Assembly-CSharp
         m_MethodName: skill1
         m_Mode: 1
@@ -1042,7 +1042,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1071774370}
+      - m_Target: {fileID: 1071774368}
         m_TargetAssemblyTypeName: BattleHandler, Assembly-CSharp
         m_MethodName: skill2
         m_Mode: 1
@@ -1953,7 +1953,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1071774369}
-  - component: {fileID: 1071774370}
+  - component: {fileID: 1071774368}
   m_Layer: 0
   m_Name: BattleHandler
   m_TagString: Untagged
@@ -1961,21 +1961,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1071774369
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071774367}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.685463, y: 8.944065, z: -8.53125}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1071774370
+--- !u!114 &1071774368
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1990,6 +1976,20 @@ MonoBehaviour:
   pfCharacterBattle: {fileID: 7721603974982762705, guid: f1f57204e3c9d3b4d8de220bf844658e, type: 3}
   playerSpritesheet: {fileID: 2800000, guid: c9ad21ce568fefd488a760a8c9b5941a, type: 3}
   enemySpritesheet: {fileID: 2800000, guid: 708ddba10751e1b40b6afd12dc913880, type: 3}
+--- !u!4 &1071774369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071774367}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -18.685463, y: 8.944065, z: -8.53125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1126443770
 GameObject:
   m_ObjectHideFlags: 0
@@ -3291,7 +3291,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1071774370}
+      - m_Target: {fileID: 1071774368}
         m_TargetAssemblyTypeName: BattleHandler, Assembly-CSharp
         m_MethodName: skill3
         m_Mode: 1

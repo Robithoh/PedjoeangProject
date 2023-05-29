@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6249203426359364355}
   - component: {fileID: 6249203426359364381}
   - component: {fileID: 5981818614648600997}
+  - component: {fileID: -4216671332781695619}
   m_Layer: 0
   m_Name: pfCharacterBattle3
   m_TagString: Untagged
@@ -59,6 +60,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1fcbe875c7f96e4a9685f267aacbe7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage1: 10
+  damage2: 10
+  damage3: 50
+--- !u!114 &-4216671332781695619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6249203426359364380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf571589d0014be4fb5b236da798abee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObj: {fileID: 6249203426359364380}
 --- !u!1 &6249203426914994207
 GameObject:
   m_ObjectHideFlags: 0

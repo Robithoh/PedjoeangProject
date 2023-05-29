@@ -145,8 +145,19 @@ public class CharacterBattle : MonoBehaviour
             Vector3 attackDir = (targetCharacterBattle.GetPosition() - GetPosition()).normalized;
             characterBase.PlayAnimAttack(attackDir, () => {
                 // Target hit
-                int damageAmount = damage1;
-                targetCharacterBattle.Damage(this, damageAmount);
+                if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "BattleScene1")
+                {
+                    int damageAmount = 50;
+                    targetCharacterBattle.Damage(this, damageAmount);
+                } else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "BattleScene2")
+                {
+                    int damageAmount = 10;
+                    targetCharacterBattle.Damage(this, damageAmount);
+                } else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "BattleScene3")
+                {
+                    int damageAmount = 10;
+                    targetCharacterBattle.Damage(this, damageAmount);
+                }
             }, () => {
                 // Attack completed, slide back
                 SlideToPosition(startingPosition, () => {
@@ -171,8 +182,19 @@ public class CharacterBattle : MonoBehaviour
             Vector3 attackDir = (targetCharacterBattle.GetPosition() - GetPosition()).normalized;
             characterBase.PlayAnimAttack(attackDir, () => {
                 // Target hit
-                int damageAmount = damage2;
-                targetCharacterBattle.Damage(this, damageAmount);
+                if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "BattleScene1")
+                {
+                    int damageAmount = 10;
+                    targetCharacterBattle.Damage(this, damageAmount);
+                } else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "BattleScene2")
+                {
+                    int damageAmount = 50;
+                    targetCharacterBattle.Damage(this, damageAmount);
+                } else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "BattleScene3")
+                {
+                    int damageAmount = 10;
+                    targetCharacterBattle.Damage(this, damageAmount);
+                }
             }, () => {
                 // Attack completed, slide back
                 SlideToPosition(startingPosition, () => {
@@ -197,8 +219,19 @@ public class CharacterBattle : MonoBehaviour
             Vector3 attackDir = (targetCharacterBattle.GetPosition() - GetPosition()).normalized;
             characterBase.PlayAnimAttack(attackDir, () => {
                 // Target hit
-                int damageAmount = damage3;
-                targetCharacterBattle.Damage(this, damageAmount);
+                if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "BattleScene1")
+                {
+                    int damageAmount = 10;
+                    targetCharacterBattle.Damage(this, damageAmount);
+                } else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "BattleScene2")
+                {
+                    int damageAmount = 10;
+                    targetCharacterBattle.Damage(this, damageAmount);
+                } else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "BattleScene3")
+                {
+                    int damageAmount = 50;
+                    targetCharacterBattle.Damage(this, damageAmount);
+                }
             }, () => {
                 // Attack completed, slide back
                 SlideToPosition(startingPosition, () => {
