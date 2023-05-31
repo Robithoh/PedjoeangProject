@@ -10,6 +10,9 @@ TagManager:
   - MusicSlider
   - UI
   - PrefabDestroy
+  - BattleScene1
+  - BattleScene2
+  - BattleScene3
   layers:
   - Default
   - TransparentFX

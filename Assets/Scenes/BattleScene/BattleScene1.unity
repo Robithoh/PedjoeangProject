@@ -1011,7 +1011,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextSceneName: 
   lastSceneName: BattleScene1
-  gameObj: {fileID: 7721603974982762702, guid: f1f57204e3c9d3b4d8de220bf844658e, type: 3}
   Hide_Panel: {fileID: 0}
   Hide_Panel1: {fileID: 0}
   Hide_Panel2: {fileID: 0}
@@ -1028,7 +1027,7 @@ GameObject:
   - component: {fileID: 622812124}
   m_Layer: 0
   m_Name: BattleHandler
-  m_TagString: Untagged
+  m_TagString: BattleScene1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2774,7 +2773,7 @@ GameObject:
   - component: {fileID: 1575375740}
   m_Layer: 0
   m_Name: GameHandler
-  m_TagString: Untagged
+  m_TagString: BattleScene1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2813,7 +2812,7 @@ GameObject:
   - component: {fileID: 1608005876}
   m_Layer: 0
   m_Name: Button_Skill2
-  m_TagString: Untagged
+  m_TagString: BattleScene1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

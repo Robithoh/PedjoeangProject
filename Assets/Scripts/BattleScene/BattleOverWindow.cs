@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BattleOverWindow : MonoBehaviour {
 
     private static BattleOverWindow instance;
-
+ 
     private void Awake() {
         instance = this;
         Hide();

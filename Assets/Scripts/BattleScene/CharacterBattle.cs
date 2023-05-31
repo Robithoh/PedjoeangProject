@@ -17,10 +17,6 @@ public class CharacterBattle : MonoBehaviour
     private HealthSystem healthSystem;
     private World_Bar healthBar;
 
-    public int damage1;
-    public int damage2;
-    public int damage3;
-
     private enum State
     {
         Idle,
@@ -145,15 +141,15 @@ public class CharacterBattle : MonoBehaviour
             Vector3 attackDir = (targetCharacterBattle.GetPosition() - GetPosition()).normalized;
             characterBase.PlayAnimAttack(attackDir, () => {
                 // Target hit
-                if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "BattleScene1")
+                if (UnityEngine.SceneManagement.SceneManager.GetSceneByName("BattleScene1").isLoaded)
                 {
                     int damageAmount = 50;
                     targetCharacterBattle.Damage(this, damageAmount);
-                } else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "BattleScene2")
+                } else if (UnityEngine.SceneManagement.SceneManager.GetSceneByName("BattleScene2").isLoaded)
                 {
                     int damageAmount = 10;
                     targetCharacterBattle.Damage(this, damageAmount);
-                } else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "BattleScene3")
+                } else if (UnityEngine.SceneManagement.SceneManager.GetSceneByName("BattleScene3").isLoaded)
                 {
                     int damageAmount = 10;
                     targetCharacterBattle.Damage(this, damageAmount);
@@ -182,15 +178,15 @@ public class CharacterBattle : MonoBehaviour
             Vector3 attackDir = (targetCharacterBattle.GetPosition() - GetPosition()).normalized;
             characterBase.PlayAnimAttack(attackDir, () => {
                 // Target hit
-                if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "BattleScene1")
+                if (UnityEngine.SceneManagement.SceneManager.GetSceneByName("BattleScene1").isLoaded)
                 {
                     int damageAmount = 10;
                     targetCharacterBattle.Damage(this, damageAmount);
-                } else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "BattleScene2")
+                } else if (UnityEngine.SceneManagement.SceneManager.GetSceneByName("BattleScene2").isLoaded)
                 {
                     int damageAmount = 50;
                     targetCharacterBattle.Damage(this, damageAmount);
-                } else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "BattleScene3")
+                } else if (UnityEngine.SceneManagement.SceneManager.GetSceneByName("BattleScene3").isLoaded)
                 {
                     int damageAmount = 10;
                     targetCharacterBattle.Damage(this, damageAmount);
@@ -219,15 +215,15 @@ public class CharacterBattle : MonoBehaviour
             Vector3 attackDir = (targetCharacterBattle.GetPosition() - GetPosition()).normalized;
             characterBase.PlayAnimAttack(attackDir, () => {
                 // Target hit
-                if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "BattleScene1")
+                if (UnityEngine.SceneManagement.SceneManager.GetSceneByName("BattleScene1").isLoaded)
                 {
                     int damageAmount = 10;
                     targetCharacterBattle.Damage(this, damageAmount);
-                } else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "BattleScene2")
+                } else if (UnityEngine.SceneManagement.SceneManager.GetSceneByName("BattleScene2").isLoaded)
                 {
                     int damageAmount = 10;
                     targetCharacterBattle.Damage(this, damageAmount);
-                } else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "BattleScene3")
+                } else if (UnityEngine.SceneManagement.SceneManager.GetSceneByName("BattleScene3").isLoaded)
                 {
                     int damageAmount = 50;
                     targetCharacterBattle.Damage(this, damageAmount);
