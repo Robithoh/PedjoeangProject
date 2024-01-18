@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class EnemyMain : MonoBehaviour
 {
     private Animator animenemy;
-    public GameObject myTarget;
+    private GameObject myTarget;
     public NavMeshAgent myAgent;
 
     // Start is called before the first frame update
@@ -18,7 +18,7 @@ public class EnemyMain : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(myTarget != null)
+        if (myTarget != null)
         {
             animenemy.SetBool("isMoving", true);
             myAgent.destination = myTarget.transform.position;

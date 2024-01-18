@@ -15,6 +15,7 @@ public class SceneChange : MonoBehaviour
     public GameObject Hide_Panel1;
     public GameObject Hide_Panel2;
     public GameObject Hide_Panel3;
+    public GameObject Hide_Panel4;
 
     // on trigger enter to change scene
     public void OnTriggerEnter(Collider other)
@@ -77,6 +78,7 @@ public class SceneChange : MonoBehaviour
             Hide_Panel1.SetActive(false);
             Hide_Panel2.SetActive(false);
             Hide_Panel3.SetActive(false);
+            Hide_Panel4.SetActive(false);
         }
     }
 
@@ -88,6 +90,7 @@ public class SceneChange : MonoBehaviour
             Hide_Panel1.SetActive(true);
             Hide_Panel2.SetActive(true);
             Hide_Panel3.SetActive(true);
+            Hide_Panel4.SetActive(true);
         }
     }
 
@@ -99,6 +102,7 @@ public class SceneChange : MonoBehaviour
             Hide_Panel1.SetActive(true);
             Hide_Panel2.SetActive(true);
             Hide_Panel3.SetActive(true);
+            Hide_Panel4.SetActive(true);
         }
     }
 
@@ -111,6 +115,7 @@ public class SceneChange : MonoBehaviour
             Hide_Panel1.SetActive(true);
             Hide_Panel2.SetActive(true);
             Hide_Panel3.SetActive(true);
+            Hide_Panel4.SetActive(true);
         } 
     }
 }

@@ -1,0 +1,70 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class EnemyTB : MonoBehaviour
+{
+    [Header("Enemy Stats")]
+    public float maxHP;
+    public float HP;
+    public float DEF;
+    public float ATK;
+    public float MATK;
+    public float CRIT;
+
+    public Image HealthBar;
+    private Animator anim;
+
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+        UpdateHealthBar(HP, maxHP);
+    }
+
+    public void UpdateHealthBar(float CurrentHealth, float MaxHealth)
+    {
+        HealthBar.fillAmount = CurrentHealth / MaxHealth;
+    }
+
+    private void EnemyAttackRoutine()
+    {
+        StartCoroutine(EnemyAttack());
+    }
+
+    IEnumerator EnemyAttack()
+    {
+        yield return new WaitForSeconds(1.5f);
+        transform.position = new Vector3(15.509f, -0.0084f, 6.464f);
+        anim.SetBool("isAttack", true);
+
+        yield return new WaitForSeconds(2.033f);
+        PlayerTB playerScript = FindObjectOfType<PlayerTB>();
+        if (playerScript != null)
+        {
+            Debug.Log("Nyerang");
+            float damageDealt = ATK - playerScript.DEF;
+            damageDealt = Mathf.Max(0, damageDealt); // Pastikan damage tidak negatif
+            playerScript.TakeDamage(damageDealt);
+            transform.position = new Vector3(17.69f, -0.0084f, 7.741f);
+            anim.SetBool("isAttack", false);
+        }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        // Implementasi pengurangan HP musuh saat diserang
+        HP -= damage;
+        UpdateHealthBar(HP, maxHP);
+        if (HP <= 0)
+        {
+            // Musuh mati atau implementasikan logika kematian musuh
+            Destroy(gameObject);
+        }
+        else
+        {
+            EnemyAttackRoutine();
+        }
+    }
+}

@@ -9,14 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu/MainMenu.unity
     guid: 6b6838d244e527e42b47ec61f4942673
   - enabled: 1
-    path: Assets/Scenes/MainScene/MainScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Scenes/BattleScene/BattleScene1.unity
-    guid: c148f78900d5bee4ebbb8533ccb33202
-  - enabled: 1
     path: Assets/Scenes/Menu/PedjoeangSelection.unity
     guid: 89fa29140688ad2459e5e6dd59e0bb14
+  - enabled: 1
+    path: Assets/Scenes/MainScene/MainScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Menu/Pengaturan.unity
     guid: b57e0fccf2e41b344929dc066bfa2b90
@@ -24,9 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu/Tentang.unity
     guid: bbd85b76942d7034fb9a0cbfce12b0cd
   - enabled: 1
-    path: Assets/Scenes/BattleScene/BattleScene2.unity
-    guid: bb3f5a613fa8026438b3ab9a15e2e9f5
-  - enabled: 1
-    path: Assets/Scenes/BattleScene/BattleScene3.unity
-    guid: 6fd9a7ab9eb477343858090e96726289
+    path: Assets/Scenes/TurnBase/TurnBasedScene.unity
+    guid: abc586fa92c0892458865faaa8ea89e5
   m_configObjects: {}
