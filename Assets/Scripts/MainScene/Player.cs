@@ -11,10 +11,13 @@ public class Player : MonoBehaviour
     [SerializeField] 
     private Transform cameraTransform;
 
+    public SceneInfo sceneInfo;
+
     // Start is called before the first frame update
     void Start()
     {
         anime = GetComponent<Animator>();
+        transform.position = sceneInfo.charPos;
     }
 
     // Update is called once per frame

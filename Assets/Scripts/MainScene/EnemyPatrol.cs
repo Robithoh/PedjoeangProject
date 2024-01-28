@@ -14,12 +14,17 @@ public class EnemyPatrol : MonoBehaviour
     int waypointIndex;
     Vector3 target;
 
+    public SceneInfo sceneInfo;
+
+    public bool newScene = true;
+
     // Start is called before the first frame update
     void Start()
     {
         animepatrol = GetComponent<Animator>();
         myAgent = GetComponent<NavMeshAgent>();
         UpdateDestination();
+        DestroyEnemy();
     }
 
     // Update is called once per frame
@@ -61,11 +66,27 @@ public class EnemyPatrol : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        Vector3 savedPos = myTarget.transform.position;
+
+        if (other.tag == "Player")
         {
-            SceneManager.LoadScene("TurnBasedScene");
+            if (sceneInfo != null)
+            {
+                sceneInfo.SaveCharPos(savedPos);
+                sceneInfo.isNextScene = newScene;
+            }
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            SceneManager.LoadScene("TurnBasedScene");
+        }
+    }
+
+    public void DestroyEnemy()
+    {
+        if (sceneInfo.isNextScene == true)
+        {
+            transform.position = new Vector3(transform.position.x, -0.58f, transform.position.z);
+            Destroy(gameObject);
         }
     }
 }
