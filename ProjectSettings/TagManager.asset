@@ -14,6 +14,7 @@ TagManager:
   - BattleScene1
   - BattleScene2
   - BattleScene3
+  - DeKock
   layers:
   - Default
   - TransparentFX

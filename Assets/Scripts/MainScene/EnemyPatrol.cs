@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+using static SceneInfo;
 
 public class EnemyPatrol : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class EnemyPatrol : MonoBehaviour
     public SceneInfo sceneInfo;
 
     public bool newScene = true;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -70,14 +73,19 @@ public class EnemyPatrol : MonoBehaviour
 
         if (other.tag == "Player")
         {
-            if (sceneInfo != null)
+            if(gameObject.tag == "DeKock")
             {
-                sceneInfo.SaveCharPos(savedPos);
-                sceneInfo.isNextScene = newScene;
+                //sceneInfo.listEnemy[0] = true;
+                if (sceneInfo != null)
+                {
+                    sceneInfo.SaveCharPos(savedPos);
+                    sceneInfo.isNextScene = newScene;
+                }
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                string deKock = sceneInfo.listScene[0];
+                SceneManager.LoadScene(deKock);
             }
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            SceneManager.LoadScene("TurnBasedScene");
         }
     }
 
@@ -85,8 +93,9 @@ public class EnemyPatrol : MonoBehaviour
     {
         if (sceneInfo.isNextScene == true)
         {
-            transform.position = new Vector3(transform.position.x, -0.58f, transform.position.z);
-            Destroy(gameObject);
+            GameObject gameObjectWithTag = GameObject.FindGameObjectWithTag("DeKock");
+            gameObjectWithTag.transform.position = new Vector3(gameObjectWithTag.transform.position.x, -0.58f, gameObjectWithTag.transform.position.z);
+            Destroy(gameObjectWithTag);
         }
     }
 }
