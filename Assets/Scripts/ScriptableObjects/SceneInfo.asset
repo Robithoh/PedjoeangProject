@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ebf759f5b740914082708ce980dac67, type: 3}
   m_Name: SceneInfo
   m_EditorClassIdentifier: 
-  charPos: {x: 46.77984, y: 2.4398882, z: -25.700258}
-  isNextScene: 1
+  charPos: {x: 47.71, y: 0.843, z: -3.63}
+  isNextScene: 0
   listScene:
   - TurnBased1
   - TurnBased2
-  listEnemy: 000100
+  - TurnBased3
+  listEnemy: 000000

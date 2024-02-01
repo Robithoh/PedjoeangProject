@@ -16,7 +16,11 @@ public class SceneInfo : ScriptableObject
 
     public void OnEnable()
     {
-        charPos = new Vector3(46.78f, 2.447f, -25.7f);
+        charPos = new Vector3(47.71f, 0.843f, -3.63f);
         isNextScene = false;
+        for (int i = 0; i < listEnemy.Count; i++)
+        {
+            listEnemy[i] = false;
+        }
     }
 }

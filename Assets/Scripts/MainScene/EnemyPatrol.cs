@@ -75,7 +75,7 @@ public class EnemyPatrol : MonoBehaviour
         {
             if(gameObject.tag == "DeKock")
             {
-                //sceneInfo.listEnemy[0] = true;
+                sceneInfo.listEnemy[0] = true;
                 if (sceneInfo != null)
                 {
                     sceneInfo.SaveCharPos(savedPos);
@@ -83,17 +83,55 @@ public class EnemyPatrol : MonoBehaviour
                 }
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
-                string deKock = sceneInfo.listScene[0];
-                SceneManager.LoadScene(deKock);
+                string sceneBattle = sceneInfo.listScene[0];
+                SceneManager.LoadScene(sceneBattle);
+            }
+            else if (gameObject.tag == "PrajuritMerah")
+            {
+                sceneInfo.listEnemy[1] = true;
+                if (sceneInfo != null)
+                {
+                    sceneInfo.SaveCharPos(savedPos);
+                    sceneInfo.isNextScene = newScene;
+                }
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                string sceneBattle = sceneInfo.listScene[1];
+                SceneManager.LoadScene(sceneBattle);
+            }
+            else if (gameObject.tag == "PrajuritHijau")
+            {
+                sceneInfo.listEnemy[2] = true;
+                if (sceneInfo != null)
+                {
+                    sceneInfo.SaveCharPos(savedPos);
+                    sceneInfo.isNextScene = newScene;
+                }
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                string sceneBattle = sceneInfo.listScene[2];
+                SceneManager.LoadScene(sceneBattle);
             }
         }
     }
 
     public void DestroyEnemy()
     {
-        if (sceneInfo.isNextScene == true)
+        if (sceneInfo.isNextScene == true && sceneInfo.listEnemy[0] == true)
         {
             GameObject gameObjectWithTag = GameObject.FindGameObjectWithTag("DeKock");
+            gameObjectWithTag.transform.position = new Vector3(gameObjectWithTag.transform.position.x, -0.58f, gameObjectWithTag.transform.position.z);
+            Destroy(gameObjectWithTag);
+        }
+        if (sceneInfo.isNextScene == true && sceneInfo.listEnemy[1] == true)
+        {
+            GameObject gameObjectWithTag = GameObject.FindGameObjectWithTag("PrajuritMerah");
+            gameObjectWithTag.transform.position = new Vector3(gameObjectWithTag.transform.position.x, -0.58f, gameObjectWithTag.transform.position.z);
+            Destroy(gameObjectWithTag);
+        }
+        if (sceneInfo.isNextScene == true && sceneInfo.listEnemy[2] == true)
+        {
+            GameObject gameObjectWithTag = GameObject.FindGameObjectWithTag("PrajuritHijau");
             gameObjectWithTag.transform.position = new Vector3(gameObjectWithTag.transform.position.x, -0.58f, gameObjectWithTag.transform.position.z);
             Destroy(gameObjectWithTag);
         }
