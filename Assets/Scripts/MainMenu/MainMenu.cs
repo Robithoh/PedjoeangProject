@@ -4,13 +4,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
-{   
+{
+    public SceneInfo sceneInfo;
+
     void Start()
     {
         MusicManager.Instance.ChangeMusic();
     }
     public void Main_Menu()
     {
+        sceneInfo.OnEnable();
         SceneManager.LoadScene("MainMenu");
     }
     public void PedjoeangSelection()
@@ -27,6 +30,7 @@ public class MainMenu : MonoBehaviour
     }
     public void MainScene()
     {
+        sceneInfo.OnEnable();
         SceneManager.LoadScene("MainScene");
         MusicManager.Instance.ChangeMusic();
     }

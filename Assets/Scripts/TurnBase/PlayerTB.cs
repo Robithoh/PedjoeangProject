@@ -14,6 +14,7 @@ public class PlayerTB : MonoBehaviour
     private float MATK;
     private float CRIT;
 
+    public GameObject panelLose;
     public GameObject Knife;
     public Image HealthBar;
     private Animator anim;
@@ -21,6 +22,7 @@ public class PlayerTB : MonoBehaviour
 
     void Start()
     {
+        panelLose.SetActive(false);
         anim = GetComponent<Animator>();
         UpdateHealthBar(HP, maxHP);
         Knife.SetActive(false);
@@ -40,6 +42,7 @@ public class PlayerTB : MonoBehaviour
         {
             // Musuh mati atau implementasikan logika kematian musuh
             Destroy(gameObject);
+            panelLose.SetActive(true);
         }
     }
 
@@ -50,7 +53,7 @@ public class PlayerTB : MonoBehaviour
 
     IEnumerator AttackSkill1()
     {
-        ATK = 20;
+        ATK = 5;
         Knife.SetActive(true);
         transform.position = new Vector3(17.139f, 0f, 7.741f);
         anim.SetBool("isAttack", true);

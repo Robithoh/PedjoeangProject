@@ -1860,7 +1860,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 991125408}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
-        m_MethodName: BackScene
+        m_MethodName: TryAgain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2457,6 +2457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc3666260207454a8af78adc2491a4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneInfo: {fileID: 11400000, guid: 6224db458cb650b4d81f1cc9212fef16, type: 2}
 --- !u!1 &1008649168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2640,7 +2641,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 991125408}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
-        m_MethodName: BackScene
+        m_MethodName: ExitMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4319,7 +4320,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 991125408}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
-        m_MethodName: BackScene
+        m_MethodName: TryAgain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6852,6 +6853,7 @@ MonoBehaviour:
   maxHP: 100
   HP: 100
   DEF: 5
+  panelLose: {fileID: 593344638}
   Knife: {fileID: 919132147721366707}
   HealthBar: {fileID: 764271573}
 --- !u!95 &4415102747306399380
@@ -8759,6 +8761,7 @@ MonoBehaviour:
   MATK: 10
   CRIT: 5
   HealthBar: {fileID: 1138292675}
+  panelWin: {fileID: 1566853125}
 --- !u!95 &7806515704555039153
 Animator:
   serializedVersion: 5

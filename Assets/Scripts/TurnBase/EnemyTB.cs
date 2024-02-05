@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EnemyTB : MonoBehaviour
@@ -15,11 +16,13 @@ public class EnemyTB : MonoBehaviour
     public float CRIT;
 
     public Image HealthBar;
+    public GameObject panelWin;
     private Animator anim;
 
     void Start()
     {
         anim = GetComponent<Animator>();
+        panelWin.SetActive(false);
         UpdateHealthBar(HP, maxHP);
     }
 
@@ -54,6 +57,7 @@ public class EnemyTB : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        String currentScene = SceneManager.GetActiveScene().name;
         // Implementasi pengurangan HP musuh saat diserang
         HP -= damage;
         UpdateHealthBar(HP, maxHP);
@@ -61,6 +65,14 @@ public class EnemyTB : MonoBehaviour
         {
             // Musuh mati atau implementasikan logika kematian musuh
             Destroy(gameObject);
+            if (currentScene == "TurnBased1")
+            {
+                panelWin.SetActive(true);
+            }
+            else
+            {
+                SceneManager.LoadScene("MainScene");
+            }
         }
         else
         {
