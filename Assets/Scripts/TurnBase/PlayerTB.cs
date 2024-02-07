@@ -15,7 +15,9 @@ public class PlayerTB : MonoBehaviour
     private float CRIT;
 
     public GameObject panelLose;
-    public GameObject Knife;
+    public GameObject BambuRuncing;
+    public GameObject Keris;
+    public GameObject Bayonet;
     public Image HealthBar;
     private Animator anim;
 
@@ -25,7 +27,9 @@ public class PlayerTB : MonoBehaviour
         panelLose.SetActive(false);
         anim = GetComponent<Animator>();
         UpdateHealthBar(HP, maxHP);
-        Knife.SetActive(false);
+        BambuRuncing.SetActive(false);
+        Keris.SetActive(false);
+        Bayonet.SetActive(false);
     }
 
     public void UpdateHealthBar(float CurrentHealth, float MaxHealth)
@@ -53,10 +57,12 @@ public class PlayerTB : MonoBehaviour
 
     IEnumerator AttackSkill1()
     {
-        ATK = 5;
-        Knife.SetActive(true);
+        ATK = 25;
+        MATK = 5;
+        CRIT = 15;
+        BambuRuncing.SetActive(true);
         transform.position = new Vector3(17.139f, 0f, 7.741f);
-        anim.SetBool("isAttack", true);
+        anim.SetBool("isStab", true);
         yield return new WaitForSeconds(1.5f);
 
         // Implementasi serangan player ke musuh
@@ -69,12 +75,12 @@ public class PlayerTB : MonoBehaviour
             if (enemyScript != null)
             {
                 Debug.Log("Player Menyerang");
-                float damageDealt = ATK - enemyScript.DEF;
+                float damageDealt = ATK + MATK + CRIT - enemyScript.DEF;
                 damageDealt = Mathf.Max(0, damageDealt); // Pastikan damage tidak negatif
                 enemyScript.TakeDamage(damageDealt);
                 transform.position = new Vector3(14.969f, 0f, 6.585823f);
-                Knife.SetActive(false);
-                anim.SetBool("isAttack", false);
+                BambuRuncing.SetActive(false);
+                anim.SetBool("isStab", false);
             }
         }
     }
@@ -86,9 +92,12 @@ public class PlayerTB : MonoBehaviour
 
     IEnumerator AttackSkill2()
     {
-        ATK = 50;
+        ATK = 25;
+        MATK = 7;
+        CRIT = 5;
+        Keris.SetActive(true);
         transform.position = new Vector3(17.139f, 0f, 7.741f);
-        anim.SetBool("isAttack", true);
+        anim.SetBool("isSlash", true);
         yield return new WaitForSeconds(1.5f);
 
         // Implementasi serangan player ke musuh
@@ -101,11 +110,12 @@ public class PlayerTB : MonoBehaviour
             if (enemyScript != null)
             {
                 Debug.Log("Player Menyerang");
-                float damageDealt = ATK - enemyScript.DEF;
+                float damageDealt = ATK + MATK + CRIT - enemyScript.DEF;
                 damageDealt = Mathf.Max(0, damageDealt); // Pastikan damage tidak negatif
                 enemyScript.TakeDamage(damageDealt);
                 transform.position = new Vector3(14.969f, 0f, 6.585823f);
-                anim.SetBool("isAttack", false);
+                Keris.SetActive(false);
+                anim.SetBool("isSlash", false);
             }
         }
     }
@@ -117,9 +127,12 @@ public class PlayerTB : MonoBehaviour
 
     IEnumerator AttackSkill3()
     {
-        ATK = 35;
+        ATK = 2;
+        MATK = 30;
+        CRIT = 11;
+        Bayonet.SetActive(true);
         transform.position = new Vector3(17.139f, 0f, 7.741f);
-        anim.SetBool("isAttack", true);
+        anim.SetBool("isStab", true);
         yield return new WaitForSeconds(1.5f);
 
         // Implementasi serangan player ke musuh
@@ -132,11 +145,77 @@ public class PlayerTB : MonoBehaviour
             if (enemyScript != null)
             {
                 Debug.Log("Player Menyerang");
-                float damageDealt = ATK - enemyScript.DEF;
+                float damageDealt = ATK + MATK + CRIT - enemyScript.DEF;
                 damageDealt = Mathf.Max(0, damageDealt); // Pastikan damage tidak negatif
                 enemyScript.TakeDamage(damageDealt);
                 transform.position = new Vector3(14.969f, 0f, 6.585823f);
-                anim.SetBool("isAttack", false);
+                Bayonet.SetActive(false);
+                anim.SetBool("isStab", false);
+            }
+        }
+    }
+
+    public void Attack4OnClick()
+    {
+        StartCoroutine(AttackSkill4());
+    }
+
+    IEnumerator AttackSkill4()
+    {
+        ATK = 22;
+        MATK = 10;
+        CRIT = 8;
+        transform.position = new Vector3(17.139f, 0f, 7.741f);
+        anim.SetBool("isBambu", true);
+        yield return new WaitForSeconds(1.5f);
+
+        // Implementasi serangan player ke musuh
+        // Mengurangi HP musuh sejumlah ATK player
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        foreach (GameObject enemy in enemies)
+        {
+            EnemyTB enemyScript = enemy.GetComponent<EnemyTB>();
+            if (enemyScript != null)
+            {
+                Debug.Log("Player Menyerang");
+                float damageDealt = ATK + MATK + CRIT - enemyScript.DEF;
+                damageDealt = Mathf.Max(0, damageDealt); // Pastikan damage tidak negatif
+                enemyScript.TakeDamage(damageDealt);
+                transform.position = new Vector3(14.969f, 0f, 6.585823f);
+                anim.SetBool("isBambu", false);
+            }
+        }
+    }
+    public void Attack5OnClick()
+    {
+        StartCoroutine(AttackSkill5());
+    }
+
+    IEnumerator AttackSkill5()
+    {
+        ATK = 15;
+        MATK = 12;
+        CRIT = 15;
+        transform.position = new Vector3(17.139f, 0f, 7.741f);
+        anim.SetBool("isBambu", true);
+        yield return new WaitForSeconds(1.5f);
+
+        // Implementasi serangan player ke musuh
+        // Mengurangi HP musuh sejumlah ATK player
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        foreach (GameObject enemy in enemies)
+        {
+            EnemyTB enemyScript = enemy.GetComponent<EnemyTB>();
+            if (enemyScript != null)
+            {
+                Debug.Log("Player Menyerang");
+                float damageDealt = ATK + MATK + CRIT - enemyScript.DEF;
+                damageDealt = Mathf.Max(0, damageDealt); // Pastikan damage tidak negatif
+                enemyScript.TakeDamage(damageDealt);
+                transform.position = new Vector3(14.969f, 0f, 6.585823f);
+                anim.SetBool("isBambu", false);
             }
         }
     }

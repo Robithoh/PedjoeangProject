@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
     }
     public void Main_Menu()
     {
-        sceneInfo.OnEnable();
+        //sceneInfo.OnEnable();
         SceneManager.LoadScene("MainMenu");
     }
     public void PedjoeangSelection()
@@ -30,7 +30,7 @@ public class MainMenu : MonoBehaviour
     }
     public void MainScene()
     {
-        sceneInfo.OnEnable();
+        //sceneInfo.OnEnable();
         SceneManager.LoadScene("MainScene");
         MusicManager.Instance.ChangeMusic();
     }
