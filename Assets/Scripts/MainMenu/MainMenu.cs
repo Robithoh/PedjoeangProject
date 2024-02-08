@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
-        MusicManager.Instance.ChangeMusic();
+        // MusicManager.Instance.ChangeMusic();
     }
     public void Main_Menu()
     {

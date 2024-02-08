@@ -4,25 +4,33 @@ using UnityEngine.UI;
 
 public class VolumeSettings : MonoBehaviour
 {
-    [SerializeField] private AudioMixer myMixer;
+    [SerializeField] private AudioMixer audioMixer;
+    [SerializeField] private VolumeInfo volumeInfo;
     private Slider musicSlider;
-
-    // slider from other scene with tag slider
 
     private void Start()
     {
-        SetMusicVolume();
-        
-    }
-
-    private void Awake()
-    {
         musicSlider = GameObject.FindGameObjectWithTag("MusicSlider").GetComponent<Slider>();
+
+        if (PlayerPrefs.HasKey("MusicVolume"))
+        {
+            float savedVolume = PlayerPrefs.GetFloat("MusicVolume");
+            musicSlider.value = savedVolume;
+            SetMusicVolume(savedVolume);
+        }
+        else
+        {
+            musicSlider.value = volumeInfo.volumeLevel;
+        }
     }
 
-    public void SetMusicVolume()
+    public void SetMusicVolume(float volume)
     {
-        float volume = musicSlider.value;
-        myMixer.SetFloat("music", Mathf.Log10(volume) * 20);
+        audioMixer.SetFloat("music", Mathf.Log10(volume) * 20);
+
+        PlayerPrefs.SetFloat("MusicVolume", volume);
+        PlayerPrefs.Save();
+
+        volumeInfo.SetVolume(volume);
     }
 }
