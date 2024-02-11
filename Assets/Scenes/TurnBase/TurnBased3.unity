@@ -6828,6 +6828,12 @@ MonoBehaviour:
   Keris: {fileID: 184965370587103947}
   Bayonet: {fileID: 7744523883519157310}
   HealthBar: {fileID: 670191526}
+  attackButtons:
+  - {fileID: 2024273552}
+  - {fileID: 1550664896}
+  - {fileID: 724919447}
+  - {fileID: 566822024}
+  - {fileID: 2111238919}
 --- !u!95 &4415102747306399380
 Animator:
   serializedVersion: 5

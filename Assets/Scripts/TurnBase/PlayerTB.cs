@@ -21,6 +21,8 @@ public class PlayerTB : MonoBehaviour
     public Image HealthBar;
     private Animator anim;
 
+    public Button[] attackButtons;
+
 
     void Start()
     {
@@ -52,7 +54,12 @@ public class PlayerTB : MonoBehaviour
 
     public void Attack1OnClick()
     {
+        foreach (Button button in attackButtons)
+        {
+            button.interactable = false;
+        }
         StartCoroutine(AttackSkill1());
+        StartCoroutine(DelayButton());
     }
 
     IEnumerator AttackSkill1()
@@ -87,7 +94,12 @@ public class PlayerTB : MonoBehaviour
 
     public void Attack2OnClick()
     {
+        foreach (Button button in attackButtons)
+        {
+            button.interactable = false;
+        }
         StartCoroutine(AttackSkill2());
+        StartCoroutine(DelayButton());
     }
 
     IEnumerator AttackSkill2()
@@ -122,7 +134,12 @@ public class PlayerTB : MonoBehaviour
 
     public void Attack3OnClick()
     {
+        foreach (Button button in attackButtons)
+        {
+            button.interactable = false;
+        }
         StartCoroutine(AttackSkill3());
+        StartCoroutine(DelayButton());
     }
 
     IEnumerator AttackSkill3()
@@ -157,7 +174,12 @@ public class PlayerTB : MonoBehaviour
 
     public void Attack4OnClick()
     {
+        foreach (Button button in attackButtons)
+        {
+            button.interactable = false;
+        }
         StartCoroutine(AttackSkill4());
+        StartCoroutine(DelayButton());
     }
 
     IEnumerator AttackSkill4()
@@ -189,7 +211,12 @@ public class PlayerTB : MonoBehaviour
     }
     public void Attack5OnClick()
     {
+        foreach (Button button in attackButtons)
+        {
+            button.interactable = false;
+        }
         StartCoroutine(AttackSkill5());
+        StartCoroutine(DelayButton());
     }
 
     IEnumerator AttackSkill5()
@@ -217,6 +244,16 @@ public class PlayerTB : MonoBehaviour
                 transform.position = new Vector3(14.969f, 0f, 6.585823f);
                 anim.SetBool("isBambu", false);
             }
+        }
+    }
+
+    IEnumerator DelayButton()
+    {
+        yield return new WaitForSeconds(7f);
+
+        foreach (Button button in attackButtons)
+        {
+            button.interactable = true;
         }
     }
 }
