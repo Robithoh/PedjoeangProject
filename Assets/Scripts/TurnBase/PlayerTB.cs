@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerTB : MonoBehaviour
 {
@@ -64,9 +65,18 @@ public class PlayerTB : MonoBehaviour
 
     IEnumerator AttackSkill1()
     {
-        ATK = 25;
-        MATK = 5;
-        CRIT = 15;
+        if (SceneManager.GetActiveScene().name == "TurnBased1")
+        {
+            ATK = 100;
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased2")
+        {
+            ATK = 0;
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased3")
+        {
+            ATK = 0;
+        }
         BambuRuncing.SetActive(true);
         transform.position = new Vector3(17.139f, 0f, 7.741f);
         anim.SetBool("isStab", true);
@@ -104,9 +114,18 @@ public class PlayerTB : MonoBehaviour
 
     IEnumerator AttackSkill2()
     {
-        ATK = 25;
-        MATK = 7;
-        CRIT = 5;
+        if (SceneManager.GetActiveScene().name == "TurnBased1")
+        {
+            ATK = 100;
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased2")
+        {
+            ATK = 0;
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased3")
+        {
+            ATK = 0;
+        }
         Keris.SetActive(true);
         transform.position = new Vector3(17.139f, 0f, 7.741f);
         anim.SetBool("isSlash", true);
@@ -144,9 +163,18 @@ public class PlayerTB : MonoBehaviour
 
     IEnumerator AttackSkill3()
     {
-        ATK = 2;
-        MATK = 30;
-        CRIT = 11;
+        if (SceneManager.GetActiveScene().name == "TurnBased1")
+        {
+            ATK = 100;
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased2")
+        {
+            ATK = 0;
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased3")
+        {
+            ATK = 0;
+        }
         Bayonet.SetActive(true);
         transform.position = new Vector3(17.139f, 0f, 7.741f);
         anim.SetBool("isStab", true);
@@ -184,9 +212,18 @@ public class PlayerTB : MonoBehaviour
 
     IEnumerator AttackSkill4()
     {
-        ATK = 22;
-        MATK = 10;
-        CRIT = 8;
+        if (SceneManager.GetActiveScene().name == "TurnBased1")
+        {
+            ATK = 100;
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased2")
+        {
+            ATK = 0;
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased3")
+        {
+            ATK = 0;
+        }
         transform.position = new Vector3(17.139f, 0f, 7.741f);
         anim.SetBool("isBambu", true);
         yield return new WaitForSeconds(1.5f);
@@ -221,9 +258,18 @@ public class PlayerTB : MonoBehaviour
 
     IEnumerator AttackSkill5()
     {
-        ATK = 15;
-        MATK = 12;
-        CRIT = 15;
+        if (SceneManager.GetActiveScene().name == "TurnBased1")
+        {
+            ATK = 100;
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased2")
+        {
+            ATK = 0;
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased3")
+        {
+            ATK = 0;
+        }
         transform.position = new Vector3(17.139f, 0f, 7.741f);
         anim.SetBool("isBambu", true);
         yield return new WaitForSeconds(1.5f);
@@ -251,6 +297,10 @@ public class PlayerTB : MonoBehaviour
 
     public GameObject Skill1;
     public GameObject Skill2;
+    public GameObject Skill3;
+    public GameObject Skill4;
+    public GameObject Skill5;
+    public GameObject Skill6;
 
     public void Cast1OnClick()
     {
@@ -265,11 +315,25 @@ public class PlayerTB : MonoBehaviour
 
     IEnumerator CastSkill1()
     {
-        ATK = 15;
-        MATK = 12;
-        CRIT = 15;
+        // ATK = 15;
+        // MATK = 12;
+        // CRIT = 15;
+
+        if (SceneManager.GetActiveScene().name == "TurnBased1_OWA")
+        {
+            ATK = 100;
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
+        {
+            ATK = 0;
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased3_OWA")
+        {
+            ATK = 0;
+        }
         // transform.position = new Vector3(17.139f, 0f, 7.741f);
         anim.SetBool("isCast", true);
+        yield return new WaitForSeconds(1f);
         Skill1.SetActive(true);
         yield return new WaitForSeconds(1.5f);
 
@@ -304,11 +368,21 @@ public class PlayerTB : MonoBehaviour
 
     IEnumerator CastSkill2()
     {
-        ATK = 15;
-        MATK = 12;
-        CRIT = 15;
+        if (SceneManager.GetActiveScene().name == "TurnBased1_OWA")
+        {
+            ATK = 100;
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
+        {
+            ATK = 0;
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased3_OWA")
+        {
+            ATK = 0;
+        }
         // transform.position = new Vector3(17.139f, 0f, 7.741f);
         anim.SetBool("isCast", true);
+        yield return new WaitForSeconds(1f);
         Skill2.SetActive(true);
         yield return new WaitForSeconds(1.5f);
 
@@ -343,11 +417,22 @@ public class PlayerTB : MonoBehaviour
 
     IEnumerator CastSkill3()
     {
-        ATK = 15;
-        MATK = 12;
-        CRIT = 15;
+        if (SceneManager.GetActiveScene().name == "TurnBased1_OWA")
+        {
+            ATK = 100;
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
+        {
+            ATK = 0;
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased3_OWA")
+        {
+            ATK = 0;
+        }
         // transform.position = new Vector3(17.139f, 0f, 7.741f);
         anim.SetBool("isCast", true);
+        yield return new WaitForSeconds(1f);
+        Skill3.SetActive(true);
         yield return new WaitForSeconds(1.5f);
 
         // Implementasi serangan player ke musuh
@@ -363,6 +448,7 @@ public class PlayerTB : MonoBehaviour
                 float damageDealt = ATK + MATK + CRIT - enemyScript.DEF;
                 damageDealt = Mathf.Max(0, damageDealt); // Pastikan damage tidak negatif
                 enemyScript.TakeDamage(damageDealt);
+                Skill3.SetActive(false);
                 transform.position = new Vector3(14.969f, 0f, 6.585823f);
                 anim.SetBool("isCast", false);
             }
@@ -380,11 +466,22 @@ public class PlayerTB : MonoBehaviour
 
     IEnumerator CastSkill4()
     {
-        ATK = 15;
-        MATK = 12;
-        CRIT = 15;
+        if (SceneManager.GetActiveScene().name == "TurnBased1_OWA")
+        {
+            ATK = 100;
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
+        {
+            ATK = 0;
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased3_OWA")
+        {
+            ATK = 0;
+        }
         // transform.position = new Vector3(17.139f, 0f, 7.741f);
         anim.SetBool("isCast", true);
+        yield return new WaitForSeconds(1f);
+        Skill4.SetActive(true);
         yield return new WaitForSeconds(1.5f);
 
         // Implementasi serangan player ke musuh
@@ -400,6 +497,7 @@ public class PlayerTB : MonoBehaviour
                 float damageDealt = ATK + MATK + CRIT - enemyScript.DEF;
                 damageDealt = Mathf.Max(0, damageDealt); // Pastikan damage tidak negatif
                 enemyScript.TakeDamage(damageDealt);
+                Skill4.SetActive(false);
                 transform.position = new Vector3(14.969f, 0f, 6.585823f);
                 anim.SetBool("isCast", false);
             }
@@ -417,11 +515,22 @@ public class PlayerTB : MonoBehaviour
 
     IEnumerator CastSkill5()
     {
-        ATK = 15;
-        MATK = 12;
-        CRIT = 15;
+        if (SceneManager.GetActiveScene().name == "TurnBased1_OWA")
+        {
+            ATK = 100;
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
+        {
+            ATK = 0;
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased3_OWA")
+        {
+            ATK = 0;
+        }
         // transform.position = new Vector3(17.139f, 0f, 7.741f);
         anim.SetBool("isCast", true);
+        yield return new WaitForSeconds(1f);
+        Skill5.SetActive(true);
         yield return new WaitForSeconds(1.5f);
 
         // Implementasi serangan player ke musuh
@@ -437,6 +546,7 @@ public class PlayerTB : MonoBehaviour
                 float damageDealt = ATK + MATK + CRIT - enemyScript.DEF;
                 damageDealt = Mathf.Max(0, damageDealt); // Pastikan damage tidak negatif
                 enemyScript.TakeDamage(damageDealt);
+                Skill5.SetActive(false);
                 transform.position = new Vector3(14.969f, 0f, 6.585823f);
                 anim.SetBool("isCast", false);
             }
@@ -454,11 +564,22 @@ public class PlayerTB : MonoBehaviour
 
     IEnumerator CastSkill6()
     {
-        ATK = 15;
-        MATK = 12;
-        CRIT = 15;
+        if (SceneManager.GetActiveScene().name == "TurnBased1_OWA")
+        {
+            ATK = 100;
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
+        {
+            ATK = 0;
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased3_OWA")
+        {
+            ATK = 0;
+        }
         // transform.position = new Vector3(17.139f, 0f, 7.741f);
         anim.SetBool("isCast", true);
+        yield return new WaitForSeconds(1f);
+        Skill6.SetActive(true);
         yield return new WaitForSeconds(1.5f);
 
         // Implementasi serangan player ke musuh
@@ -474,6 +595,7 @@ public class PlayerTB : MonoBehaviour
                 float damageDealt = ATK + MATK + CRIT - enemyScript.DEF;
                 damageDealt = Mathf.Max(0, damageDealt); // Pastikan damage tidak negatif
                 enemyScript.TakeDamage(damageDealt);
+                Skill6.SetActive(false);
                 transform.position = new Vector3(14.969f, 0f, 6.585823f);
                 anim.SetBool("isCast", false);
             }
