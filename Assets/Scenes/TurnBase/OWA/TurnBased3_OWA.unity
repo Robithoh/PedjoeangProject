@@ -3223,7 +3223,6 @@ GameObject:
   - component: {fileID: 839631600}
   - component: {fileID: 839631599}
   - component: {fileID: 839631598}
-  - component: {fileID: 839631601}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -3305,18 +3304,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &839631601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 839631597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e609d2c4ee659674bbd4a86b779a6a96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &850731723
 GameObject:
   m_ObjectHideFlags: 0
@@ -8979,6 +8966,8 @@ MonoBehaviour:
   BambuRuncing: {fileID: 919132147721366707}
   Keris: {fileID: 184965370587103947}
   Bayonet: {fileID: 7744523883519157310}
+  Pistol: {fileID: 0}
+  PedangAnggar: {fileID: 0}
   HealthBar: {fileID: 764271573}
   attackButtons:
   - {fileID: 652044840}
