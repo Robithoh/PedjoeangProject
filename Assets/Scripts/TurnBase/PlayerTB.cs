@@ -19,6 +19,8 @@ public class PlayerTB : MonoBehaviour
     public GameObject BambuRuncing;
     public GameObject Keris;
     public GameObject Bayonet;
+    public GameObject Pistol;
+    public GameObject PedangAnggar;
     public Image HealthBar;
     private Animator anim;
 
@@ -30,9 +32,6 @@ public class PlayerTB : MonoBehaviour
         panelLose.SetActive(false);
         anim = GetComponent<Animator>();
         UpdateHealthBar(HP, maxHP);
-        BambuRuncing.SetActive(false);
-        Keris.SetActive(false);
-        Bayonet.SetActive(false);
     }
 
     public void UpdateHealthBar(float CurrentHealth, float MaxHealth)
@@ -224,8 +223,9 @@ public class PlayerTB : MonoBehaviour
         {
             ATK = 0;
         }
-        transform.position = new Vector3(17.139f, 0f, 7.741f);
-        anim.SetBool("isBambu", true);
+        Pistol.SetActive(true);
+        //transform.position = new Vector3(17.139f, 0f, 7.741f);
+        anim.SetBool("isShoot", true);
         yield return new WaitForSeconds(1.5f);
 
         // Implementasi serangan player ke musuh
@@ -241,8 +241,9 @@ public class PlayerTB : MonoBehaviour
                 float damageDealt = ATK + MATK + CRIT - enemyScript.DEF;
                 damageDealt = Mathf.Max(0, damageDealt); // Pastikan damage tidak negatif
                 enemyScript.TakeDamage(damageDealt);
-                transform.position = new Vector3(14.969f, 0f, 6.585823f);
-                anim.SetBool("isBambu", false);
+                //transform.position = new Vector3(14.969f, 0f, 6.585823f);
+                Pistol.SetActive(false);
+                anim.SetBool("isShoot", false);
             }
         }
     }
@@ -270,8 +271,9 @@ public class PlayerTB : MonoBehaviour
         {
             ATK = 0;
         }
+        PedangAnggar.SetActive(true);
         transform.position = new Vector3(17.139f, 0f, 7.741f);
-        anim.SetBool("isBambu", true);
+        anim.SetBool("isSlash", true);
         yield return new WaitForSeconds(1.5f);
 
         // Implementasi serangan player ke musuh
@@ -288,7 +290,8 @@ public class PlayerTB : MonoBehaviour
                 damageDealt = Mathf.Max(0, damageDealt); // Pastikan damage tidak negatif
                 enemyScript.TakeDamage(damageDealt);
                 transform.position = new Vector3(14.969f, 0f, 6.585823f);
-                anim.SetBool("isBambu", false);
+                PedangAnggar.SetActive(false);
+                anim.SetBool("isSlash", false);
             }
         }
     }
