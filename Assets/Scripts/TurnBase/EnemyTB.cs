@@ -12,8 +12,6 @@ public class EnemyTB : MonoBehaviour
     public float HP;
     public float DEF;
     public float ATK;
-    public float MATK;
-    public float CRIT;
 
     public Image HealthBar;
     public GameObject PedangAnggar;
@@ -50,7 +48,7 @@ public class EnemyTB : MonoBehaviour
         if (playerScript != null)
         {
             Debug.Log("Nyerang");
-            float damageDealt = ATK + MATK + CRIT - playerScript.DEF;
+            float damageDealt = ATK - playerScript.DEF;
             damageDealt = Mathf.Max(0, damageDealt); // Pastikan damage tidak negatif
             playerScript.TakeDamage(damageDealt);
             transform.position = new Vector3(17.69f, -0.0084f, 7.741f);

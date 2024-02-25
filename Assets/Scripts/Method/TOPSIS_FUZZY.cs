@@ -2,19 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FuzzyTOPSISIS : MonoBehaviour
+public class TOPSIS_FUZZY : MonoBehaviour
 {
     // Function: Rank 
     void Ranking(float[,] flow)
     {
+        //int rowCount = flow.GetLength(0);
+        //for (int i = 0; i < rowCount; i++)
+        //{
+        //    // Modify this according to your Unity UI text placement
+        //    Debug.Log("a" + flow[i, 0] + ": " + flow[i, 1]);
+        //}
+
         int rowCount = flow.GetLength(0);
+        // Insertion sort
+        for (int i = 1; i < rowCount; i++)
+        {
+            float currentFlow = flow[i, 1];
+            float currentLabel = flow[i, 0];
+            int j = i - 1;
+            while (j >= 0 && flow[j, 1] < currentFlow)
+            {
+                flow[j + 1, 1] = flow[j, 1];
+                flow[j + 1, 0] = flow[j, 0];
+                j--;
+            }
+            flow[j + 1, 1] = currentFlow;
+            flow[j + 1, 0] = currentLabel;
+        }
+
+        // Print the sorted values
         for (int i = 0; i < rowCount; i++)
         {
             // Modify this according to your Unity UI text placement
             Debug.Log("a" + flow[i, 0] + ": " + flow[i, 1]);
         }
-        // Modify this to handle visualization in Unity
-        Debug.Log("Visualizing in Unity...");
     }
 
     // Function: Fuzzy TOPSIS
@@ -158,7 +180,9 @@ public class FuzzyTOPSISIS : MonoBehaviour
             }
             c_i[i] = d_minus[i] / (d_minus[i] + d_plus[i]);
             if (verbose)
-                Debug.Log("a" + (i + 1) + ": " + c_i[i]);
+            {
+                //Debug.Log("a" + (i + 1) + ": " + c_i[i]);
+            }
         }
 
         if (graph)
