@@ -670,7 +670,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 52354f4eef0728e4fabf2cfdd626fbb2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 42662bacf472a18448e453d3fbaa425a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1491,7 +1491,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 72.5742, y: 52.807}
+  m_SizeDelta: {x: 102.4717, y: 52.807}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &504621599
 MonoBehaviour:
@@ -1526,9 +1526,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Senjata
-
-    3'
+  m_Text: Senjata 3
 --- !u!222 &504621600
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1685,7 +1683,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1d4775435472d3946b69d6a62688de43, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 42662bacf472a18448e453d3fbaa425a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2118,7 +2116,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1d4775435472d3946b69d6a62688de43, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 42662bacf472a18448e453d3fbaa425a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2207,7 +2205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.5254902, b: 1, a: 1}
+  m_Color: {r: 0.8509804, g: 0.7254902, b: 0.6117647, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2266,8 +2264,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 72.5742, y: 52.807}
+  m_AnchoredPosition: {x: 0.0029898, y: 0}
+  m_SizeDelta: {x: 94.74, y: 52.807}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &685270424
 MonoBehaviour:
@@ -2302,9 +2300,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Senjata
-
-    2'
+  m_Text: Senjata 2
 --- !u!222 &685270425
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2438,7 +2434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.34509805, a: 1}
+  m_Color: {r: 0.8509804, g: 0.7254902, b: 0.6117647, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3089,7 +3085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.34509805, a: 1}
+  m_Color: {r: 0.8509804, g: 0.7254902, b: 0.6117647, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3333,7 +3329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.5254902, b: 1, a: 1}
+  m_Color: {r: 0.8509804, g: 0.7254902, b: 0.6117647, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3799,7 +3795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.8509804, g: 0.7254902, b: 0.6117647, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3889,8 +3885,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 72.5742, y: 52.807}
+  m_AnchoredPosition: {x: 0.00001049, y: 0}
+  m_SizeDelta: {x: 88.8678, y: 52.807}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &974902945
 MonoBehaviour:
@@ -3925,9 +3921,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Senjata
-
-    3'
+  m_Text: Senjata 6
 --- !u!222 &974902946
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4122,6 +4116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneInfo: {fileID: 11400000, guid: 6224db458cb650b4d81f1cc9212fef16, type: 2}
+  Hint_Panel: {fileID: 0}
 --- !u!1 &1007110754
 GameObject:
   m_ObjectHideFlags: 0
@@ -4431,7 +4426,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bdbddd8bbf38c4c4483dd7166952696a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 42662bacf472a18448e453d3fbaa425a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4699,7 +4694,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bdbddd8bbf38c4c4483dd7166952696a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 42662bacf472a18448e453d3fbaa425a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5219,7 +5214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.8509804, g: 0.7254902, b: 0.6117647, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6668,8 +6663,6 @@ MonoBehaviour:
   HP: 100
   DEF: 5
   ATK: 20
-  MATK: 10
-  CRIT: 5
   HealthBar: {fileID: 1138292675}
   PedangAnggar: {fileID: 2028512362}
   panelWin: {fileID: 1566853125}
@@ -7730,7 +7723,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 52354f4eef0728e4fabf2cfdd626fbb2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 42662bacf472a18448e453d3fbaa425a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8994,6 +8987,8 @@ MonoBehaviour:
   BambuRuncing: {fileID: 919132147721366707}
   Keris: {fileID: 184965370587103947}
   Bayonet: {fileID: 7744523883519157310}
+  Pistol: {fileID: 0}
+  PedangAnggar: {fileID: 0}
   HealthBar: {fileID: 764271573}
   attackButtons:
   - {fileID: 652044840}

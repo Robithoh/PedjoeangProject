@@ -7,12 +7,15 @@ public class UI : MonoBehaviour
 {
     public SceneInfo sceneInfo;
     public GameObject Hint_Panel;
+    public Animator anim;
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         if (sceneInfo.isGameRetried == true)
         {
-            Hint_Panel.SetActive(true);
+            anim.SetBool("isRetry", true);
+            // Hint_Panel.SetActive(true);
         }
     }
 
