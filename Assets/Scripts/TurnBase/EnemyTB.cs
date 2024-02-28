@@ -67,7 +67,7 @@ public class EnemyTB : MonoBehaviour
         {
             // Musuh mati atau implementasikan logika kematian musuh
             Destroy(gameObject);
-            if (currentScene == "TurnBased1")
+            if (currentScene == "TurnBased1" || currentScene == "TurnBased1_OWA")
             {
                 panelWin.SetActive(true);
             }

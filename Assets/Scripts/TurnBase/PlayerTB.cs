@@ -329,7 +329,6 @@ public class PlayerTB : MonoBehaviour
         }
         StartCoroutine(CastSkill1());
         StartCoroutine(DelayButton());
-
     }
 
     IEnumerator CastSkill1()
@@ -337,15 +336,15 @@ public class PlayerTB : MonoBehaviour
         ATK = 7;
         ATK2 = 6;
         ATK3 = 7;
-        if (SceneManager.GetActiveScene().name == "TurnBased1")
+        if (SceneManager.GetActiveScene().name == "TurnBased1_OWA")
         {
             dmgMulti = 2f;
         }
-        else if (SceneManager.GetActiveScene().name == "TurnBased2")
+        else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
         {
             dmgMulti = 2.2f;
         }
-        else if (SceneManager.GetActiveScene().name == "TurnBased3")
+        else if (SceneManager.GetActiveScene().name == "TurnBased3_OWA")
         {
             dmgMulti = 1.7f;
         }
@@ -364,7 +363,6 @@ public class PlayerTB : MonoBehaviour
             EnemyTB enemyScript = enemy.GetComponent<EnemyTB>();
             if (enemyScript != null)
             {
-                Debug.Log("Player Menyerang");
                 float damageDealt = (ATK + ATK2 + ATK3) * dmgMulti - enemyScript.DEF;
                 damageDealt = Mathf.Max(0, damageDealt); // Pastikan damage tidak negatif
                 enemyScript.TakeDamage(damageDealt);
@@ -389,15 +387,15 @@ public class PlayerTB : MonoBehaviour
         ATK = 10;
         ATK2 = 4;
         ATK3 = 6;
-        if (SceneManager.GetActiveScene().name == "TurnBased1")
+        if (SceneManager.GetActiveScene().name == "TurnBased1_OWA")
         {
             dmgMulti = 3.1f;
         }
-        else if (SceneManager.GetActiveScene().name == "TurnBased2")
+        else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
         {
             dmgMulti = 2.2f;
         }
-        else if (SceneManager.GetActiveScene().name == "TurnBased3")
+        else if (SceneManager.GetActiveScene().name == "TurnBased3_OWA")
         {
             dmgMulti = 1.9f;
         }
@@ -416,7 +414,6 @@ public class PlayerTB : MonoBehaviour
             EnemyTB enemyScript = enemy.GetComponent<EnemyTB>();
             if (enemyScript != null)
             {
-                Debug.Log("Player Menyerang");
                 float damageDealt = (ATK + ATK2 + ATK3) * dmgMulti - enemyScript.DEF;
                 damageDealt = Mathf.Max(0, damageDealt); // Pastikan damage tidak negatif
                 enemyScript.TakeDamage(damageDealt);
@@ -441,15 +438,15 @@ public class PlayerTB : MonoBehaviour
         ATK = 5;
         ATK2 = 9;
         ATK3 = 6;
-        if (SceneManager.GetActiveScene().name == "TurnBased1")
+        if (SceneManager.GetActiveScene().name == "TurnBased1_OWA")
         {
             dmgMulti = 2f;
         }
-        else if (SceneManager.GetActiveScene().name == "TurnBased2")
+        else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
         {
             dmgMulti = 3.1f;
         }
-        else if (SceneManager.GetActiveScene().name == "TurnBased3")
+        else if (SceneManager.GetActiveScene().name == "TurnBased3_OWA")
         {
             dmgMulti = 1.7f;
         }
@@ -493,15 +490,15 @@ public class PlayerTB : MonoBehaviour
         ATK = 4;
         ATK2 = 7;
         ATK3 = 9;
-        if (SceneManager.GetActiveScene().name == "TurnBased1")
+        if (SceneManager.GetActiveScene().name == "TurnBased1_OWA")
         {
             dmgMulti = 1.8f;
         }
-        else if (SceneManager.GetActiveScene().name == "TurnBased2")
+        else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
         {
             dmgMulti = 2.5f;
         }
-        else if (SceneManager.GetActiveScene().name == "TurnBased3")
+        else if (SceneManager.GetActiveScene().name == "TurnBased3_OWA")
         {
             dmgMulti = 3.1f;
         }
@@ -545,15 +542,15 @@ public class PlayerTB : MonoBehaviour
         ATK = 6;
         ATK2 = 7;
         ATK3 = 7;
-        if (SceneManager.GetActiveScene().name == "TurnBased1")
+        if (SceneManager.GetActiveScene().name == "TurnBased1_OWA")
         {
             dmgMulti = 2f;
         }
-        else if (SceneManager.GetActiveScene().name == "TurnBased2")
+        else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
         {
             dmgMulti = 2.6f;
         }
-        else if (SceneManager.GetActiveScene().name == "TurnBased3")
+        else if (SceneManager.GetActiveScene().name == "TurnBased3_OWA")
         {
             dmgMulti = 1.5f;
         }
@@ -594,17 +591,20 @@ public class PlayerTB : MonoBehaviour
 
     IEnumerator CastSkill6()
     {
+        ATK = 7;
+        ATK2 = 7;
+        ATK3 = 6;
         if (SceneManager.GetActiveScene().name == "TurnBased1_OWA")
         {
-            ATK = 100;
+            dmgMulti = 2.6f;
         }
         else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
         {
-            ATK = 0;
+            dmgMulti = 2f;
         }
         else if (SceneManager.GetActiveScene().name == "TurnBased3_OWA")
         {
-            ATK = 0;
+            dmgMulti = 1.2f;
         }
         // transform.position = new Vector3(17.139f, 0f, 7.741f);
         anim.SetBool("isCast", true);
@@ -622,7 +622,7 @@ public class PlayerTB : MonoBehaviour
             if (enemyScript != null)
             {
                 Debug.Log("Player Menyerang");
-                float damageDealt = ATK - enemyScript.DEF;
+                float damageDealt = (ATK + ATK2 + ATK3) * dmgMulti - enemyScript.DEF;
                 damageDealt = Mathf.Max(0, damageDealt); // Pastikan damage tidak negatif
                 enemyScript.TakeDamage(damageDealt);
                 Skill6.SetActive(false);

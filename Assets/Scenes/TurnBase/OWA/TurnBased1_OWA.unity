@@ -7735,6 +7735,8 @@ MonoBehaviour:
   BambuRuncing: {fileID: 919132147721366707}
   Keris: {fileID: 184965370587103947}
   Bayonet: {fileID: 7744523883519157310}
+  Pistol: {fileID: 0}
+  PedangAnggar: {fileID: 0}
   HealthBar: {fileID: 764271573}
   attackButtons:
   - {fileID: 652044840}
@@ -9714,9 +9716,7 @@ MonoBehaviour:
   maxHP: 100
   HP: 100
   DEF: 20
-  ATK: 20
-  MATK: 15
-  CRIT: 5
+  ATK: 60
   HealthBar: {fileID: 1138292675}
   PedangAnggar: {fileID: 3933474813518557385}
   panelWin: {fileID: 1566853125}
