@@ -6,6 +6,15 @@ using UnityEngine.SceneManagement;
 public class UI : MonoBehaviour
 {
     public SceneInfo sceneInfo;
+    public GameObject Hint_Panel;
+
+    void Start()
+    {
+        if (sceneInfo.isGameRetried == true)
+        {
+            Hint_Panel.SetActive(true);
+        }
+    }
 
     public void TryAgain()
     {
@@ -15,8 +24,14 @@ public class UI : MonoBehaviour
         //{
         //    sceneInfo.listEnemy[i] = false;
         //}
-        sceneInfo.OnEnable();
-        SceneManager.LoadScene("MainScene");
+
+        //sceneInfo.OnEnable();
+        //SceneManager.LoadScene("MainScene");
+
+        sceneInfo.isGameRetried = true;
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
+        
     }
 
     public void ExitMainMenu()

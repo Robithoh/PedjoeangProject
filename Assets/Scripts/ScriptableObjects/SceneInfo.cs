@@ -6,6 +6,7 @@ public class SceneInfo : ScriptableObject
 {
     public Vector3 charPos;
     public bool isNextScene = false;
+    public bool isGameRetried = false;
     public List<string> listScene = new List<string>();
     public List<bool> listEnemy = new List<bool>();
 
@@ -18,6 +19,7 @@ public class SceneInfo : ScriptableObject
     {
         charPos = new Vector3(47.71f, 0.843f, -3.63f);
         isNextScene = false;
+        isGameRetried = false;
         for (int i = 0; i < listEnemy.Count; i++)
         {
             listEnemy[i] = false;

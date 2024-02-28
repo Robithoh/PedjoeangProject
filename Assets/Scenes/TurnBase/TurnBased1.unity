@@ -2681,6 +2681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneInfo: {fileID: 11400000, guid: 6224db458cb650b4d81f1cc9212fef16, type: 2}
+  Hint_Panel: {fileID: 949840570}
 --- !u!1 &1008649168
 GameObject:
   m_ObjectHideFlags: 0
