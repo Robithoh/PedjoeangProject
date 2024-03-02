@@ -11,10 +11,10 @@ public class UI : MonoBehaviour
 
     void Start()
     {
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
         if (sceneInfo.isGameRetried == true)
         {
-            anim.SetBool("isRetry", true);
+            anim.SetBool("isBlink", true);
             // Hint_Panel.SetActive(true);
         }
     }

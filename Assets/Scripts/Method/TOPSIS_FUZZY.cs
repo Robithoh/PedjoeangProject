@@ -200,8 +200,42 @@ public class TOPSIS_FUZZY : MonoBehaviour
         return c_i;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    void RankScene1()
+    {
+        // Data Input
+        // Kriteria Bobot Alternatif
+
+        float[,,] weights = new float[,,] { { { 1, 1, 3 }, { 1, 3, 5 }, { 7, 9, 9 }, { 1, 1, 3 }, { 1, 3, 5 } } };
+
+        // Matriks Keputusan
+
+        float[,,] dataset = new float[,,]
+        {
+            {
+                { 90, 100, 110 }, { 15, 20, 25 }, { 5, 7, 9 }, { 4, 6, 8 }, { 5, 7, 9 }
+            },
+            {
+                { 90, 100, 110 }, { 15, 20, 25 }, { 8, 10, 12 }, { 2, 4, 6 }, { 4, 6, 8 }
+            },
+            {
+                { 90, 100, 110 }, { 15, 20, 25 }, { 3, 5, 7 }, { 7, 9, 11 }, { 4, 6, 8 }
+            },
+            {
+                { 90, 100, 110 }, { 15, 20, 25 }, { 2, 4, 6 }, { 5, 7, 9 }, { 7, 9, 11 }
+            },
+            {
+                { 90, 100, 110 }, { 15, 20, 25 }, { 4, 6, 8 }, { 5, 7, 9 }, { 5, 7, 9 }
+            }
+        };
+
+        // Tipe Kriteria (min/max)
+        string[] criterionType = { "min", "min", "max", "max", "max" };
+
+        // Panggil Fungsi Fuzzy TOPSIS
+        FuzzyTOPSIS(dataset, weights, criterionType);
+    }
+
+    void RankScene2()
     {
         // Data Input
         // Kriteria Bobot Alternatif
@@ -213,27 +247,68 @@ public class TOPSIS_FUZZY : MonoBehaviour
         float[,,] dataset = new float[,,]
         {
             {
-                { 1, 1, 3 }, { 1, 3, 5 }, { 1, 3, 5 }, { 5, 7, 9 }, { 5, 7, 9 }
+                { 90, 100, 110 }, { 15, 20, 25 }, { 5, 7, 9 }, { 4, 6, 8 }, { 5, 7, 9 }
             },
             {
-                { 1, 1, 3 }, { 3, 5, 7 }, { 5, 7, 9 }, { 3, 5, 7 }, { 1, 1, 3 }
+                { 90, 100, 110 }, { 15, 20, 25 }, { 8, 10, 12 }, { 2, 4, 6 }, { 4, 6, 8 }
             },
             {
-                { 3, 5, 7 }, { 5, 7, 9 }, { 7, 9, 9 }, { 3, 5, 7 }, { 3, 5, 7 }
+                { 90, 100, 110 }, { 15, 20, 25 }, { 3, 5, 7 }, { 7, 9, 11 }, { 4, 6, 8 }
             },
             {
-                { 5, 7, 9 }, { 1, 3, 5 }, { 1, 1, 3 }, { 1, 1, 3 }, { 7, 9, 9 }
+                { 90, 100, 110 }, { 15, 20, 25 }, { 2, 4, 6 }, { 5, 7, 9 }, { 7, 9, 11 }
             },
             {
-                { 7, 9, 9 }, { 7, 9, 9 }, { 1, 1, 3 }, { 1, 3, 5 }, { 1, 1, 3 }
+                { 90, 100, 110 }, { 15, 20, 25 }, { 4, 6, 8 }, { 5, 7, 9 }, { 5, 7, 9 }
             }
         };
 
         // Tipe Kriteria (min/max)
-        string[] criterionType = { "max", "max", "max", "min", "min" };
+        string[] criterionType = { "min", "min", "max", "max", "max" };
 
         // Panggil Fungsi Fuzzy TOPSIS
         FuzzyTOPSIS(dataset, weights, criterionType);
+    }
+
+    void RankScene3()
+    {
+        // Data Input
+        // Kriteria Bobot Alternatif
+
+        float[,,] weights = new float[,,] { { { 1, 1, 3 }, { 1, 3, 5 }, { 1, 1, 3 }, { 1, 3, 5 }, { 7, 9, 9 } } };
+
+        // Matriks Keputusan
+
+        float[,,] dataset = new float[,,]
+        {
+            {
+                { 90, 100, 110 }, { 15, 20, 25 }, { 5, 7, 9 }, { 4, 6, 8 }, { 5, 7, 9 }
+            },
+            {
+                { 90, 100, 110 }, { 15, 20, 25 }, { 8, 10, 12 }, { 2, 4, 6 }, { 4, 6, 8 }
+            },
+            {
+                { 90, 100, 110 }, { 15, 20, 25 }, { 3, 5, 7 }, { 7, 9, 11 }, { 4, 6, 8 }
+            },
+            {
+                { 90, 100, 110 }, { 15, 20, 25 }, { 2, 4, 6 }, { 5, 7, 9 }, { 7, 9, 11 }
+            },
+            {
+                { 90, 100, 110 }, { 15, 20, 25 }, { 4, 6, 8 }, { 5, 7, 9 }, { 5, 7, 9 }
+            }
+        };
+
+        // Tipe Kriteria (min/max)
+        string[] criterionType = { "min", "min", "max", "max", "max" };
+
+        // Panggil Fungsi Fuzzy TOPSIS
+        FuzzyTOPSIS(dataset, weights, criterionType);
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        RankScene3();
     }
 }
 
