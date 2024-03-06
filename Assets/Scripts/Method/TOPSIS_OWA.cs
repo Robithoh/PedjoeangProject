@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.UI;
 
 public class TOPSIS_OWA : MonoBehaviour
 {
@@ -10,20 +11,19 @@ public class TOPSIS_OWA : MonoBehaviour
     [SerializeField]
     private int[] criteria;
 
-    [SerializeField]
-    private double[] customWeights;
+    public Text teks;
 
     private void Start()
     {
         // Example data, replace with your own data
         double[,] data = new double[,]
         {
-            {2, 4, 1, 1, 1},
-            {5, 1, 3, 1, 4},
-            {1, 4, 4, 1, 1},
-            {3, 2, 1, 1, 2},
-            {4, 4, 2, 4, 1},
-            {4, 1, 5, 4, 4}
+            {101, 21, 7, 6, 7},
+            {102, 22, 10, 6, 4},
+            {102, 22, 4, 10, 6},
+            {102, 22, 6, 4, 10},
+            {101, 21, 8, 6, 6},
+            {101, 21, 7, 7, 6}
         };
 
         // Ensure criteria and customWeights are not null
@@ -43,15 +43,19 @@ public class TOPSIS_OWA : MonoBehaviour
             return;
         }
 
-        // Ensure custom weights are either null or have the correct length
-        if (customWeights != null && customWeights.Length != n)
+        // Array for alternative descriptions
+        string[] alternativeDescriptions = new string[]
         {
-            Debug.LogError("Number of custom weights should match the number of columns in the data.");
-            return;
-        }
+            "Alternative 1",
+            "Alternative 2",
+            "Alternative 3",
+            "Alternative 4",
+            "Alternative 5",
+            "Alternative 6"
+        };
 
         // Calculate TOPSIS with custom weights
-        Tuple<double[], double[], double[]> result = Topsissimowa(data, criteria, 1, 2, 0.1, customWeights);
+        Tuple<double[], double[], double[]> result = Topsissimowa(data, criteria);
 
         // Display results (you can customize this part based on your Unity project)
         Debug.Log("Closeness Coefficients (cc): " + string.Join(", ", result.Item1));
@@ -61,18 +65,36 @@ public class TOPSIS_OWA : MonoBehaviour
         // Get ranking
         int[] ranking = GetRanking(result.Item1);
 
-        // Display ranking
-        Debug.Log("Ranking: " + string.Join(", ", ranking));
+        // Display ranking with alternative descriptions
+        for (int i = 0; i < ranking.Length; i++)
+        {
+            Debug.Log($"Rank {i + 1}: {alternativeDescriptions[ranking[i]]}");
+        }
+
+        // Check if the first element in the ranking is 1
+        if (ranking.Length > 0 && ranking[0] == 2)
+        {
+            teks.text = "Gunakan Skill 2";
+        }
+        else if (ranking.Length > 0 && ranking[0] == 3)
+        {
+            teks.text = "Gunakan Skill 3";
+        }
+        else if (ranking.Length > 0 && ranking[0] == 4)
+        {
+            teks.text = "Gunakan Skill 4";
+        }
     }
 
     // Function to calculate TOPSIS with similarity-based OWA
-    public Tuple<double[], double[], double[]> Topsissimowa(double[,] data, int[] crit, double p = 1, double alpha1 = 2, double alpha2 = 0.1, double[] customWeights = null)
+    public Tuple<double[], double[], double[]> Topsissimowa(double[,] data, int[] crit, double p = 1, double alpha1 = 2, double alpha2 = 0.1, double[] w = null)
     {
         int m = data.GetLength(0);
         int n = data.GetLength(1);
 
-        // Example custom weights, replace with your own weights
-        double[] w = customWeights ?? Enumerable.Repeat(1.0 / n, n).ToArray();
+        
+        w = new double[] { 0.1, 0.1, 0.1, 0.6, 0.1 };
+        
 
         // Normalization of decision matrix
         double[,] a = new double[m, n];
@@ -102,8 +124,8 @@ public class TOPSIS_OWA : MonoBehaviour
         }
 
         // Calculate Similarity to Positive Ideal Solution (SPIS) and Similarity to Negative Ideal Solution (SNIS)
-        double[] SPIS = SimLPowa(PIS, a, p, alpha1, w);
-        double[] SNIS = SimLPowa(NIS, a, p, alpha2, w);
+        double[] SPIS = SimLPowa(PIS, a, p, alpha1);
+        double[] SNIS = SimLPowa(NIS, a, p, alpha2);
 
         // Calculate Closeness Coefficients (cc)
         double[] cc = SPIS.Select((x, index) => x / (x + SNIS[index])).ToArray();
@@ -112,7 +134,7 @@ public class TOPSIS_OWA : MonoBehaviour
     }
 
     // Function to calculate similarity value for each attribute
-    private double[] SimLPowa(double[] center, double[,] data, double p, double alpha, double[] w)
+    private double[] SimLPowa(double[] center, double[,] data, double p, double alpha)
     {
         int m = data.GetLength(0);
 
@@ -136,8 +158,9 @@ public class TOPSIS_OWA : MonoBehaviour
             }
         }
 
-        // Aggregate similarity matrix using OWA
-        double[] totsim = OwaMatrix(simM, w);
+        // Aggregate similarity matrix using OWA with RIM1 weights
+        double[] rim1Weights = Rim1(center.Length, alpha);
+        double[] totsim = OwaMatrix(simM, rim1Weights);
 
         return totsim;
     }
@@ -206,41 +229,6 @@ public class TOPSIS_OWA : MonoBehaviour
         return max;
     }
 
-    // Example usage
-    // private void Start()
-    // {
-    //     // Example data, replace with your own data
-    //     double[,] data = new double[,]
-    //     {
-    //     {2, 4, 1, 1, 1},
-    //     {5, 1, 3, 1, 4},
-    //     {1, 4, 4, 1, 1},
-    //     {3, 2, 1, 1, 2},
-    //     {4, 4, 2, 4, 1},
-    //     {4, 1, 5, 4, 4}
-    //     };
-
-    //     // Define criteria as 1 for benefit and 2 for cost
-    //     int[] crit = { 1, 1, 1, 1, 1 };
-
-    //     // Example custom weights, replace with your own weights
-    //     double[] customWeights = new double[] { 0.2, 0.2, 0.2, 0.2, 0.2 };
-
-    //     // Calculate TOPSIS with custom weights
-    //     Tuple<double[], double[], double[]> result = Topsissimowa(data, crit, 1, 2, 0.1, customWeights);
-
-    //     // Display results (you can customize this part based on your Unity project)
-    //     Debug.Log("Closeness Coefficients (cc): " + string.Join(", ", result.Item1));
-    //     Debug.Log("SPIS: " + string.Join(", ", result.Item2));
-    //     Debug.Log("SNIS: " + string.Join(", ", result.Item3));
-
-    //     // Get ranking
-    //     int[] ranking = GetRanking(result.Item1);
-
-    //     // Display ranking
-    //     Debug.Log("Ranking: " + string.Join(", ", ranking));
-    // }
-
     // Function to get the ranking based on closeness coefficients
     private int[] GetRanking(double[] cc)
     {
@@ -248,6 +236,11 @@ public class TOPSIS_OWA : MonoBehaviour
                          .OrderByDescending(item => item.Value)
                          .Select(item => item.Index)
                          .ToArray();
+
+        for (int i = 0; i < ranking.Length; i++)
+        {
+            ranking[i] -= 1;
+        }
 
         return ranking;
     }

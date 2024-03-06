@@ -1534,12 +1534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   criteria: 0100000001000000010000000100000001000000
-  customWeights:
-  - 0.2
-  - 0.2
-  - 0.2
-  - 0.2
-  - 0.2
+  teks: {fileID: 631668241}
 --- !u!1 &652044838
 GameObject:
   m_ObjectHideFlags: 0
@@ -2948,6 +2943,8 @@ GameObject:
   - component: {fileID: 991125406}
   - component: {fileID: 991125405}
   - component: {fileID: 991125404}
+  - component: {fileID: 991125409}
+  - component: {fileID: 991125410}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3053,6 +3050,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneInfo: {fileID: 11400000, guid: 6224db458cb650b4d81f1cc9212fef16, type: 2}
   Hint_Panel: {fileID: 0}
+  anim: {fileID: 0}
+--- !u!114 &991125409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991125403}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0565664a45e69bd4d9b1cde1a919f6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  criteria: 0100000001000000010000000100000001000000
+  teks: {fileID: 0}
+--- !u!114 &991125410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991125403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e423d0bcfb65ec2429dcf24778c02709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1008649168
 GameObject:
   m_ObjectHideFlags: 0

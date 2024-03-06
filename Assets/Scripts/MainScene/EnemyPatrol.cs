@@ -83,6 +83,7 @@ public class EnemyPatrol : MonoBehaviour
                 }
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
+                MusicManager.Instance.ChangeMusic();
                 string sceneBattle = sceneInfo.listScene[0];
                 SceneManager.LoadScene(sceneBattle);
             }
@@ -96,6 +97,7 @@ public class EnemyPatrol : MonoBehaviour
                 }
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
+                MusicManager.Instance.ChangeMusic();
                 string sceneBattle = sceneInfo.listScene[1];
                 SceneManager.LoadScene(sceneBattle);
             }
@@ -109,6 +111,7 @@ public class EnemyPatrol : MonoBehaviour
                 }
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
+                MusicManager.Instance.ChangeMusic();
                 string sceneBattle = sceneInfo.listScene[2];
                 SceneManager.LoadScene(sceneBattle);
             }
