@@ -1010,27 +1010,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 631668239}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a0d92535fe16684883b1d16cc5ae93f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1186774536a1b54439c67190fdbecd44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackWeight: 0
-  defenseWeight: 0
-  healthWeight: 0
-  maxAttack: 0
-  maxDefense: 0
-  maxhealth: 0
-  skill1Ranking:
-  - 80
-  - 70
-  - 90
-  skill2Ranking:
-  - 60
-  - 90
-  - 80
-  skill3Ranking:
-  - 90
-  - 80
-  - 70
   teks: {fileID: 631668241}
 --- !u!1 &670191524
 GameObject:
@@ -7164,7 +7146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 100
   HP: 100
-  DEF: 5
+  DEF: 20
   panelLose: {fileID: 593344638}
   BambuRuncing: {fileID: 919132147721366707}
   Keris: {fileID: 184965370587103947}

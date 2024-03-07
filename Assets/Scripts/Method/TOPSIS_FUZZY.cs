@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TOPSIS_FUZZY : MonoBehaviour
 {
+    public Text teks;
+
     // Function: Rank 
     void Ranking(float[,] flow)
     {
@@ -308,7 +312,21 @@ public class TOPSIS_FUZZY : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        RankScene3();
+        if (SceneManager.GetActiveScene().name == "TurnBased1")
+        {
+            RankScene1();
+            teks.text = "Karena Musuhnya Portugese Lieutenant maka lebih efektif menggunakan Skill 2";
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased2")
+        {
+            RankScene2();
+            teks.text = "Karena Musuhnya Portugese Lieutenant maka lebih efektif menggunakan Skill 3";
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased3")
+        {
+            RankScene2();
+            teks.text = "Karena Musuhnya Portugese Lieutenant maka lebih efektif menggunakan Skill 4";
+        }
     }
 }
 
