@@ -644,7 +644,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Senjata 1
+  m_Text: Skill 1
 --- !u!222 &256764804
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1111,7 +1111,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Senjata 3
+  m_Text: Skill 3
 --- !u!222 &504621600
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1452,7 +1452,6 @@ GameObject:
   - component: {fileID: 631668240}
   - component: {fileID: 631668242}
   - component: {fileID: 631668241}
-  - component: {fileID: 631668243}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -1521,20 +1520,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631668239}
   m_CullTransparentMesh: 1
---- !u!114 &631668243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 631668239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0565664a45e69bd4d9b1cde1a919f6dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  criteria: 0100000001000000010000000100000001000000
-  teks: {fileID: 631668241}
 --- !u!1 &652044838
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,7 +1821,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Senjata 2
+  m_Text: Skill 2
 --- !u!222 &685270425
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2572,6 +2557,7 @@ GameObject:
   - component: {fileID: 949840573}
   - component: {fileID: 949840572}
   - component: {fileID: 949840574}
+  - component: {fileID: 949840575}
   m_Layer: 5
   m_Name: Panel_Info
   m_TagString: Untagged
@@ -2658,6 +2644,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &949840575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949840570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e423d0bcfb65ec2429dcf24778c02709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teks: {fileID: 631668241}
 --- !u!1001 &955836053
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2884,7 +2883,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Senjata 6
+  m_Text: Skill 6
 --- !u!222 &974902946
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2943,8 +2942,6 @@ GameObject:
   - component: {fileID: 991125406}
   - component: {fileID: 991125405}
   - component: {fileID: 991125404}
-  - component: {fileID: 991125409}
-  - component: {fileID: 991125410}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3051,32 +3048,6 @@ MonoBehaviour:
   sceneInfo: {fileID: 11400000, guid: 6224db458cb650b4d81f1cc9212fef16, type: 2}
   Hint_Panel: {fileID: 0}
   anim: {fileID: 0}
---- !u!114 &991125409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 991125403}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0565664a45e69bd4d9b1cde1a919f6dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  criteria: 0100000001000000010000000100000001000000
-  teks: {fileID: 0}
---- !u!114 &991125410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 991125403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e423d0bcfb65ec2429dcf24778c02709, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1008649168
 GameObject:
   m_ObjectHideFlags: 0
@@ -3690,7 +3661,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Senjata 5
+  m_Text: Skill 5
 --- !u!222 &1041355954
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4012,7 +3983,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Senjata 4
+  m_Text: Skill 4
 --- !u!222 &1111091692
 CanvasRenderer:
   m_ObjectHideFlags: 0

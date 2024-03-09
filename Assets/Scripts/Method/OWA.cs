@@ -6,20 +6,21 @@ using UnityEngine.UI;
 
 public class OWA : MonoBehaviour
 {
+    public Text teks;
     void Start()
     {
         // Contoh data, gantilah dengan data sesuai kebutuhan Anda
         double[,] data = {
-            {101, 21, 7, 6, 7},
-            {102, 22, 10, 6, 4},
-            {102, 22, 4, 10, 6},
-            {102, 22, 6, 4, 10},
-            {101, 21, 8, 6, 6},
-            {101, 21, 7, 7, 6}
+            {102, 22, 7, 6, 7},
+            {101, 21, 10, 6, 4},
+            {101, 21, 6, 4, 10},
+            {101, 21, 4, 10, 6},
+            {102, 22, 8, 6, 6},
+            {102, 22, 7, 7, 6}
         };
 
         // Definisikan kriteria sebagai kriteria keuntungan atau biaya 1 untuk keuntungan 2 untuk biaya
-        int[] crit = { 1, 1, 1, 1, 1 };
+        int[] crit = { 2, 2, 1, 1, 1 };
 
         // Menghitung TOPSIS
         double[] cc, SPIS, SNIS;
@@ -38,7 +39,7 @@ public class OWA : MonoBehaviour
         PrintArray("SNIS", SNIS);
 
         // Menampilkan Koefisien Kedekatan (cc)
-        Debug.Log("Koefisien Kedekatan (cc):");
+        Debug.Log("Closenest Coefficient (cc):");
         for (int i = 0; i < cc.Length; i++)
         {
             Debug.Log($"A{i + 1}: {cc[i]}");
@@ -48,8 +49,12 @@ public class OWA : MonoBehaviour
         int[] ranking = ArrayUtils.GetSortedIndicesDescending(cc);
 
         // Menampilkan peringkat
-        Debug.Log("Peringkat Alternatif:");
-        PrintArray("Peringkat", ArrayUtils.AddOneToIndices(ranking));
+        PrintArray("Peringkat Alternatif", ArrayUtils.AddOneToIndices(ranking));
+
+        if (ranking[0] == 2)
+        {
+            teks.text = "Saudara sedang menghadapi Jendral DeKock, disarankan untuk menggunakan skill 2";
+        }
     }
 
     void PrintArray(string label, int[] array)
@@ -68,7 +73,7 @@ public class OWA : MonoBehaviour
         int m = data.GetLength(0);
         int n = data.GetLength(1);
 
-        double[] w = { 0.1, 0.1, 0.6, 0.1, 0.1 };
+        double[] w = { 0.1, 0.1, 0.4, 0.2, 0.2 };
 
         // Normalisasi matriks keputusan
         double[,] a = NormalizeMatrix(data);
@@ -179,7 +184,6 @@ public class OWA : MonoBehaviour
                 normalizedMatrix[i, j] = (matrix[i, j] - min) / (max - min);
             }
         }
-
         return normalizedMatrix;
     }
     void PrintMatrix(double[,] matrix)
