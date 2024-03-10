@@ -209,7 +209,7 @@ public class TOPSIS_FUZZY : MonoBehaviour
         // Data Input
         // Kriteria Bobot Alternatif
 
-        float[,,] weights = new float[,,] { { { 1, 1, 3 }, { 1, 3, 5 }, { 7, 9, 9 }, { 1, 1, 3 }, { 1, 3, 5 } } };
+        float[,,] weights = new float[,,] { { { 1, 1, 3 }, { 1, 3, 5 }, { 7, 9, 9 }, { 3, 5, 7 }, { 5, 7, 9 } } };
 
         // Matriks Keputusan
 
@@ -244,7 +244,7 @@ public class TOPSIS_FUZZY : MonoBehaviour
         // Data Input
         // Kriteria Bobot Alternatif
 
-        float[,,] weights = new float[,,] { { { 1, 1, 3 }, { 1, 3, 5 }, { 1, 1, 3 }, { 7, 9, 9 }, { 1, 3, 5 } } };
+        float[,,] weights = new float[,,] { { { 1, 1, 3 }, { 1, 3, 5 }, { 3, 5, 7 }, { 7, 9, 9 }, { 5, 7, 9 } } };
 
         // Matriks Keputusan
 
@@ -279,7 +279,7 @@ public class TOPSIS_FUZZY : MonoBehaviour
         // Data Input
         // Kriteria Bobot Alternatif
 
-        float[,,] weights = new float[,,] { { { 1, 1, 3 }, { 1, 3, 5 }, { 1, 1, 3 }, { 1, 3, 5 }, { 7, 9, 9 } } };
+        float[,,] weights = new float[,,] { { { 3, 5, 7 }, { 5, 7, 9 }, { 1, 1, 3 }, { 1, 3, 5 }, { 7, 9, 9 } } };
 
         // Matriks Keputusan
 
@@ -315,17 +315,17 @@ public class TOPSIS_FUZZY : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "TurnBased1")
         {
             RankScene1();
-            teks.text = "Karena Musuhnya Portugese Lieutenant maka lebih efektif menggunakan Skill 2";
+            teks.text = "Musuh yang kamu lawan adalah Jendral De Kock, maka gunakan Senjata 2 untuk melawannya";
         }
         else if (SceneManager.GetActiveScene().name == "TurnBased2")
         {
             RankScene2();
-            teks.text = "Karena Musuhnya Portugese Lieutenant maka lebih efektif menggunakan Skill 3";
+            teks.text = "Musuh yang kamu lawan adalah Prajurit Merah, maka gunakan Senjata 3 untuk melawannya";
         }
         else if (SceneManager.GetActiveScene().name == "TurnBased3")
         {
-            RankScene2();
-            teks.text = "Karena Musuhnya Portugese Lieutenant maka lebih efektif menggunakan Skill 4";
+            RankScene3();
+            teks.text = "Musuh yang kamu lawan adalah Prajurit Hijau, maka gunakan Senjata 4 untuk melawannya";
         }
     }
 }
