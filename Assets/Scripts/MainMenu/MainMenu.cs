@@ -32,7 +32,7 @@ public class MainMenu : MonoBehaviour
     {
         //sceneInfo.OnEnable();
         SceneManager.LoadScene("MainScene");
-        MusicManager.Instance.ChangeMusic();
+        // MusicManager.Instance.ChangeMusic();
     }
     public void Exit(){
         Application.Quit();

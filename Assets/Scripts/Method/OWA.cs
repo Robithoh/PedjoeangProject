@@ -7,14 +7,15 @@ using UnityEngine.UI;
 public class OWA : MonoBehaviour
 {
     public Text teks;
+    public double[] weights;
     void Start()
     {
         // Contoh data, gantilah dengan data sesuai kebutuhan Anda
         double[,] data = {
             {102, 22, 7, 6, 7},
             {101, 21, 10, 6, 4},
-            {101, 21, 6, 4, 10},
             {101, 21, 4, 10, 6},
+            {101, 21, 6, 4, 10},
             {102, 22, 8, 6, 6},
             {102, 22, 7, 7, 6}
         };
@@ -53,7 +54,15 @@ public class OWA : MonoBehaviour
 
         if (ranking[0] == 2)
         {
-            teks.text = "Saudara sedang menghadapi Jendral DeKock, disarankan untuk menggunakan skill 2";
+            teks.text = "Saudara sedang menghadapi Jendral DeKock, disarankan untuk menggunakan Skill 2";
+        } 
+        else if (ranking[0] == 3)
+        {
+            teks.text = "Saudara sedang menghadapi Prajurit Merah, disarankan untuk menggunakan Skill 3";
+        }
+        else if (ranking[0] == 4)
+        {
+            teks.text = "Saudara sedang menghadapi Prajurit Hijau, disarankan untuk menggunakan Skill 4";
         }
     }
 
@@ -73,7 +82,7 @@ public class OWA : MonoBehaviour
         int m = data.GetLength(0);
         int n = data.GetLength(1);
 
-        double[] w = { 0.1, 0.1, 0.4, 0.2, 0.2 };
+        double[] w = weights;
 
         // Normalisasi matriks keputusan
         double[,] a = NormalizeMatrix(data);

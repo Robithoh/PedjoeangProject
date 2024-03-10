@@ -869,7 +869,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Senjata 1
+  m_Text: Skill 1
 --- !u!222 &256764804
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1464,7 +1464,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Senjata 3
+  m_Text: Skill 3
 --- !u!222 &504621600
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2217,28 +2217,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 631668239}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a0d92535fe16684883b1d16cc5ae93f, type: 3}
+  m_Script: {fileID: 11500000, guid: e423d0bcfb65ec2429dcf24778c02709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackWeight: 0
-  defenseWeight: 0
-  healthWeight: 0
-  maxAttack: 0
-  maxDefense: 0
-  maxhealth: 0
-  skill1Ranking:
-  - 80
-  - 70
-  - 90
-  skill2Ranking:
-  - 60
-  - 90
-  - 80
-  skill3Ranking:
-  - 90
-  - 80
-  - 70
   teks: {fileID: 631668241}
+  weights:
+  - 0.1
+  - 0.2
+  - 0.2
+  - 0.2
+  - 0.3
 --- !u!1 &651432976
 GameObject:
   m_ObjectHideFlags: 0
@@ -2572,7 +2560,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Senjata 2
+  m_Text: Skill 2
 --- !u!222 &685270425
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4139,7 +4127,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Senjata 6
+  m_Text: Skill 6
 --- !u!222 &974902946
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4980,7 +4968,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Senjata 5
+  m_Text: Skill 5
 --- !u!222 &1041355954
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5366,7 +5354,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Senjata 4
+  m_Text: Skill 4
 --- !u!222 &1111091692
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6577,7 +6565,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Musuh : Jendral DeKock'
+  m_Text: 'Musuh : Prajurit Hijau'
 --- !u!222 &1703569315
 CanvasRenderer:
   m_ObjectHideFlags: 0
