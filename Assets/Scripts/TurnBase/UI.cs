@@ -15,7 +15,7 @@ public class UI : MonoBehaviour
         if (sceneInfo.isGameRetried == true)
         {
             anim.SetBool("isBlink", true);
-            // Hint_Panel.SetActive(true);
+            sceneInfo.isGameRetried = false;
         }
     }
 

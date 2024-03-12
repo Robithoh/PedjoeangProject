@@ -6,6 +6,7 @@ using UnityEngine;
 public class Open_Hint_Panel : MonoBehaviour
 {
     public GameObject Hint_Panel;
+    public GameObject Panel_Anim;
 
     public void OpenHintPanel()
     {
@@ -13,5 +14,6 @@ public class Open_Hint_Panel : MonoBehaviour
         {
             Hint_Panel.SetActive(true);
         }
+        Panel_Anim.SetActive(false);
     }
 }

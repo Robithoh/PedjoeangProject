@@ -334,7 +334,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 750, y: 152}
+  m_AnchoredPosition: {x: -750, y: 152}
   m_SizeDelta: {x: 700, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &523617592
@@ -435,7 +435,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 251f7a710e93dac468202e39c981263f, type: 3}
     m_FontSize: 50
-    m_FontStyle: 0
+    m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 5
     m_MaxSize: 90
@@ -445,7 +445,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '"The Only Easy Day, Was Yesterday"'
+  m_Text: '"Per Aspera Ad Astra"'
 --- !u!222 &617331480
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -570,7 +570,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 750, y: -306.41998}
+  m_AnchoredPosition: {x: 750, y: -306.42}
   m_SizeDelta: {x: 1097.249, y: 216.84}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &799662596
@@ -596,7 +596,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 251f7a710e93dac468202e39c981263f, type: 3}
     m_FontSize: 90
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 7
     m_MaxSize: 90
@@ -606,7 +606,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ahmad Robithoh Akmal
+  m_Text: Muhammad Zidan
 --- !u!222 &799662597
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1017,7 +1017,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 251f7a710e93dac468202e39c981263f, type: 3}
     m_FontSize: 90
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 7
     m_MaxSize: 90
@@ -1027,7 +1027,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Muhammad Zidan
+  m_Text: Ahmad Robithoh Akmal
 --- !u!222 &1461269335
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1096,7 +1096,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 251f7a710e93dac468202e39c981263f, type: 3}
     m_FontSize: 50
-    m_FontStyle: 0
+    m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 5
     m_MaxSize: 90
@@ -1106,7 +1106,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '"Per Aspera Ad Astra"'
+  m_Text: '"The Only Easy Day, Was Yesterday"'
 --- !u!222 &1593758824
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1282,7 +1282,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -750, y: 152}
+  m_AnchoredPosition: {x: 750, y: 152}
   m_SizeDelta: {x: 700, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1725945560

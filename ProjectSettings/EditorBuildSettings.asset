@@ -20,13 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu/Tentang.unity
     guid: bbd85b76942d7034fb9a0cbfce12b0cd
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TurnBase/TurnBased1.unity
     guid: abc586fa92c0892458865faaa8ea89e5
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TurnBase/TurnBased2.unity
     guid: b2bcd38fd572e2c49982c628e07669dd
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TurnBase/TurnBased3.unity
     guid: e910ba61fb0835c4db2588994de1d56f
   - enabled: 1

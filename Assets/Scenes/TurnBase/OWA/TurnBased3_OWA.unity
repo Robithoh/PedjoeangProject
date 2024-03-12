@@ -2931,6 +2931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hint_Panel: {fileID: 949840570}
+  Panel_Anim: {fileID: 548791675}
 --- !u!1 &715021393
 GameObject:
   m_ObjectHideFlags: 0

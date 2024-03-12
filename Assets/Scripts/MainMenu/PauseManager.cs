@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
@@ -43,10 +44,7 @@ public class PauseManager : MonoBehaviour
         PauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameisPaused = false;
-        
-        // inVisible Cursor
         Cursor.visible = false;
-        // Lock Cursor
         Cursor.lockState = CursorLockMode.Locked;
     }
     void Pause()
@@ -54,10 +52,20 @@ public class PauseManager : MonoBehaviour
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameisPaused = true;
-        
-        // Visible Cursor
         Cursor.visible = true;
-        // unLock Cursor
         Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void Main_Menu()
+    {
+        Resume();
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene("MainMenu");
+    }
+    public void MainScene()
+    {
+        Resume();
+        SceneManager.LoadScene("MainScene");
     }
 }
