@@ -8,6 +8,14 @@ public class TOPSIS_FUZZY : MonoBehaviour
 {
     public Text teks;
 
+    //public float[] bobot1;
+
+    //public float[] bobot2;
+    //public float[] bobot3;
+    //public float[] bobot4;
+    //public float[] bobot5;
+
+
     // Function: Rank 
     void Ranking(float[,] flow)
     {
@@ -209,6 +217,8 @@ public class TOPSIS_FUZZY : MonoBehaviour
         // Data Input
         // Kriteria Bobot Alternatif
 
+        //float[,,] weights = new float[,,] { { { bobot1[0], bobot1[1], bobot3[2] }, { bobot2[0], bobot2[1], bobot2[2] }, { bobot3[0], bobot3[1], bobot3[2] }, { bobot4[0],
+        //            bobot4[1], bobot4[2] }, { bobot5[0], bobot5[1], bobot5[2] } } };
         float[,,] weights = new float[,,] { { { 1, 1, 3 }, { 1, 3, 5 }, { 7, 9, 9 }, { 3, 5, 7 }, { 5, 7, 9 } } };
 
         // Matriks Keputusan
@@ -243,7 +253,8 @@ public class TOPSIS_FUZZY : MonoBehaviour
     {
         // Data Input
         // Kriteria Bobot Alternatif
-
+        //float[,,] weights = new float[,,] { { { bobot1[0], bobot1[1], bobot3[2] }, { bobot2[0], bobot2[1], bobot2[2] }, { bobot3[0], bobot3[1], bobot3[2] }, { bobot4[0],
+        //            bobot4[1], bobot4[2] }, { bobot5[0], bobot5[1], bobot5[2] } } };
         float[,,] weights = new float[,,] { { { 1, 1, 3 }, { 1, 3, 5 }, { 3, 5, 7 }, { 7, 9, 9 }, { 5, 7, 9 } } };
 
         // Matriks Keputusan
@@ -279,6 +290,8 @@ public class TOPSIS_FUZZY : MonoBehaviour
         // Data Input
         // Kriteria Bobot Alternatif
 
+        //float[,,] weights = new float[,,] { { { bobot1[0], bobot1[1], bobot3[2] }, { bobot2[0], bobot2[1], bobot2[2] }, { bobot3[0], bobot3[1], bobot3[2] }, { bobot4[0],
+        //            bobot4[1], bobot4[2] }, { bobot5[0], bobot5[1], bobot5[2] } } };
         float[,,] weights = new float[,,] { { { 3, 5, 7 }, { 5, 7, 9 }, { 1, 1, 3 }, { 1, 3, 5 }, { 7, 9, 9 } } };
 
         // Matriks Keputusan
