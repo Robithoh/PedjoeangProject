@@ -1479,11 +1479,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teks: {fileID: 631668241}
-  bobot1: []
-  bobot2: []
-  bobot3: []
-  bobot4: []
-  bobot5: []
 --- !u!1 &652044838
 GameObject:
   m_ObjectHideFlags: 0
@@ -2254,7 +2249,6 @@ GameObject:
   - component: {fileID: 839631600}
   - component: {fileID: 839631599}
   - component: {fileID: 839631598}
-  - component: {fileID: 839631601}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -2336,39 +2330,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &839631601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 839631597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1186774536a1b54439c67190fdbecd44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  teks: {fileID: 0}
-  bobot1:
-  - 1
-  - 1
-  - 3
-  bobot2:
-  - 1
-  - 3
-  - 5
-  bobot3:
-  - 7
-  - 9
-  - 9
-  bobot4:
-  - 3
-  - 5
-  - 7
-  bobot5:
-  - 5
-  - 7
-  - 9
 --- !u!1 &880440924
 GameObject:
   m_ObjectHideFlags: 0
