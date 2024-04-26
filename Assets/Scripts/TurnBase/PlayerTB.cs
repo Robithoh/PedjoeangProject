@@ -184,8 +184,8 @@ public class PlayerTB : MonoBehaviour
             dmgMulti = 1.7f;
         }
         Bayonet.SetActive(true);
-        transform.position = new Vector3(17.139f, 0f, 7.741f);
-        anim.SetBool("isStab", true);
+        //transform.position = new Vector3(17.139f, 0f, 7.741f);
+        anim.SetBool("isRifle", true);
         yield return new WaitForSeconds(1.5f);
 
         // Implementasi serangan player ke musuh
@@ -201,9 +201,9 @@ public class PlayerTB : MonoBehaviour
                 float damageDealt = (ATK + ATK2 + ATK3) * dmgMulti - enemyScript.DEF;
                 damageDealt = Mathf.Max(0, damageDealt); // Pastikan damage tidak negatif
                 enemyScript.TakeDamage(damageDealt);
-                transform.position = new Vector3(14.969f, 0f, 6.585823f);
+                //transform.position = new Vector3(14.969f, 0f, 6.585823f);
                 Bayonet.SetActive(false);
-                anim.SetBool("isStab", false);
+                anim.SetBool("isRifle", false);
             }
         }
     }

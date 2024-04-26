@@ -328,7 +328,7 @@ public class TOPSIS_FUZZY : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "TurnBased1")
         {
             RankScene1();
-            teks.text = "Musuh yang kamu lawan adalah Jendral De Kock, maka gunakan Senjata 2 untuk melawannya";
+            teks.text = "Musuh yang kamu lawan adalah seorang Jendral dengan Pedangnya, maka gunakan Keris untuk melawannya";
         }
         else if (SceneManager.GetActiveScene().name == "TurnBased2")
         {
