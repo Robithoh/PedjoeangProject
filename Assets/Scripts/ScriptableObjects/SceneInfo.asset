@@ -16,7 +16,7 @@ MonoBehaviour:
   isNextScene: 0
   isGameRetried: 0
   listScene:
-  - TurnBased1
-  - TurnBased2
-  - TurnBased3
+  - TurnBased1_OWA
+  - TurnBased2_OWA
+  - TurnBased3_OWA
   listEnemy: 000000

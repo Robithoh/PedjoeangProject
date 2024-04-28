@@ -29,13 +29,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TurnBase/TurnBased3.unity
     guid: e910ba61fb0835c4db2588994de1d56f
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TurnBase/OWA/TurnBased1_OWA.unity
     guid: fdd98f6931e1f6045b381cd8338711cd
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TurnBase/OWA/TurnBased2_OWA.unity
     guid: 81f26a66b1689274a8468162be009754
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TurnBase/OWA/TurnBased3_OWA.unity
     guid: 878296617b4fa2e4792aefcff82ec7bf
   m_configObjects: {}

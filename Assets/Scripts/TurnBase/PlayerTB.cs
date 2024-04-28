@@ -10,11 +10,13 @@ public class PlayerTB : MonoBehaviour
     public float maxHP;
     public float HP;
     public float DEF;
+    public float energy;
+    public float maxenergy;
     private float ATK;
     private float ATK2;
     private float ATK3;
     private float dmgMulti;
-
+    
     public GameObject panelLose;
     public GameObject BambuRuncing;
     public GameObject Keris;
@@ -22,6 +24,7 @@ public class PlayerTB : MonoBehaviour
     public GameObject Pistol;
     public GameObject PedangAnggar;
     public Image HealthBar;
+    public Image EnergyBar;
     private Animator anim;
 
     public Button[] attackButtons;
@@ -32,6 +35,7 @@ public class PlayerTB : MonoBehaviour
         panelLose.SetActive(false);
         anim = GetComponent<Animator>();
         UpdateHealthBar(HP, maxHP);
+        UpdateEnergyBar(energy, maxenergy);
     }
 
     public void UpdateHealthBar(float CurrentHealth, float MaxHealth)
@@ -319,7 +323,17 @@ public class PlayerTB : MonoBehaviour
     public GameObject Skill4;
     public GameObject Skill5;
     public GameObject Skill6;
+    public float energyCost_Skill1;
+    public float energyCost_Skill2;
+    public float energyCost_Skill3;
+    public float energyCost_Skill4;
+    public float energyCost_Skill5;
+    public float energyCost_Skill6;
 
+    public void UpdateEnergyBar(float CurrentEnergy, float MaxEnergy)
+    {
+        EnergyBar.fillAmount = CurrentEnergy / MaxEnergy;
+    }
     public void Cast1OnClick()
     {
         foreach (Button button in attackButtons)
@@ -335,9 +349,11 @@ public class PlayerTB : MonoBehaviour
         ATK = 7;
         ATK2 = 6;
         ATK3 = 7;
+        energy -= energyCost_Skill1;
+        UpdateEnergyBar(energy,maxenergy);
         if (SceneManager.GetActiveScene().name == "TurnBased1_OWA")
         {
-            dmgMulti = 2f;
+            dmgMulti = 1.5f;
         }
         else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
         {
@@ -386,9 +402,11 @@ public class PlayerTB : MonoBehaviour
         ATK = 10;
         ATK2 = 4;
         ATK3 = 6;
+        energy -= energyCost_Skill2;
+        UpdateEnergyBar(energy,maxenergy);
         if (SceneManager.GetActiveScene().name == "TurnBased1_OWA")
         {
-            dmgMulti = 3.1f;
+            dmgMulti = 3.5f;
         }
         else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
         {
@@ -437,9 +455,11 @@ public class PlayerTB : MonoBehaviour
         ATK = 5;
         ATK2 = 9;
         ATK3 = 6;
+        energy -= energyCost_Skill3;
+        UpdateEnergyBar(energy,maxenergy);
         if (SceneManager.GetActiveScene().name == "TurnBased1_OWA")
         {
-            dmgMulti = 2f;
+            dmgMulti = 1.5f;
         }
         else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
         {
@@ -489,9 +509,11 @@ public class PlayerTB : MonoBehaviour
         ATK = 4;
         ATK2 = 7;
         ATK3 = 9;
+        energy -= energyCost_Skill4;
+        UpdateEnergyBar(energy,maxenergy);
         if (SceneManager.GetActiveScene().name == "TurnBased1_OWA")
         {
-            dmgMulti = 1.8f;
+            dmgMulti = 2.3f;
         }
         else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
         {
@@ -541,9 +563,11 @@ public class PlayerTB : MonoBehaviour
         ATK = 6;
         ATK2 = 7;
         ATK3 = 7;
+        energy -= energyCost_Skill5;
+        UpdateEnergyBar(energy,maxenergy);
         if (SceneManager.GetActiveScene().name == "TurnBased1_OWA")
         {
-            dmgMulti = 2f;
+            dmgMulti = 1.5f;
         }
         else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
         {
@@ -593,9 +617,11 @@ public class PlayerTB : MonoBehaviour
         ATK = 7;
         ATK2 = 7;
         ATK3 = 6;
+        energy -= energyCost_Skill6;
+        UpdateEnergyBar(energy,maxenergy);
         if (SceneManager.GetActiveScene().name == "TurnBased1_OWA")
         {
-            dmgMulti = 2.6f;
+            dmgMulti = 1.5f;
         }
         else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
         {

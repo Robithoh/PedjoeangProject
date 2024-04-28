@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 using static SceneInfo;
+using UnityEngine.UI;
 
 public class EnemyPatrol : MonoBehaviour
 {
@@ -18,8 +19,10 @@ public class EnemyPatrol : MonoBehaviour
     public SceneInfo sceneInfo;
 
     public bool newScene = true;
-
-
+    public Animator transiton;
+    public Text teks;
+    public GameObject[] enemy_sprite;
+    public GameObject panel_transition;
 
     // Start is called before the first frame update
     void Start()
@@ -67,13 +70,20 @@ public class EnemyPatrol : MonoBehaviour
         }
     }
 
+    private IEnumerator DelayedSceneLoad(string sceneName)
+    {
+        yield return new WaitForSeconds(4f); // Menunda selama 2 detik
+
+        SceneManager.LoadScene(sceneName);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         Vector3 savedPos = myTarget.transform.position;
 
         if (other.tag == "Player")
         {
-            if(gameObject.tag == "DeKock")
+            if (gameObject.tag == "DeKock")
             {
                 sceneInfo.listEnemy[0] = true;
                 if (sceneInfo != null)
@@ -85,7 +95,12 @@ public class EnemyPatrol : MonoBehaviour
                 Cursor.visible = true;
                 // MusicManager.Instance.ChangeMusic();
                 string sceneBattle = sceneInfo.listScene[0];
-                SceneManager.LoadScene(sceneBattle);
+                transiton.SetTrigger("Start");
+                panel_transition.SetActive(true);
+                enemy_sprite[0].SetActive(true);
+                teks.text = "Jendral De Kock (Boss)";
+                transiton.SetBool("isStart", true);
+                StartCoroutine(DelayedSceneLoad(sceneBattle));
             }
             else if (gameObject.tag == "PrajuritMerah")
             {
@@ -99,7 +114,12 @@ public class EnemyPatrol : MonoBehaviour
                 Cursor.visible = true;
                 // MusicManager.Instance.ChangeMusic();
                 string sceneBattle = sceneInfo.listScene[1];
-                SceneManager.LoadScene(sceneBattle);
+                transiton.SetTrigger("Start");
+                panel_transition.SetActive(true);
+                enemy_sprite[1].SetActive(true);
+                teks.text = "Prajurit Merah";
+                transiton.SetBool("isStart", true);
+                StartCoroutine(DelayedSceneLoad(sceneBattle));
             }
             else if (gameObject.tag == "PrajuritHijau")
             {
@@ -112,8 +132,14 @@ public class EnemyPatrol : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 // MusicManager.Instance.ChangeMusic();
+                
                 string sceneBattle = sceneInfo.listScene[2];
-                SceneManager.LoadScene(sceneBattle);
+                
+                panel_transition.SetActive(true);
+                enemy_sprite[2].SetActive(true);
+                teks.text = "Prajurit Hijau";
+                transiton.SetBool("isStart", true);
+                StartCoroutine(DelayedSceneLoad(sceneBattle));
             }
         }
     }

@@ -8,15 +8,19 @@ public class UI : MonoBehaviour
     public SceneInfo sceneInfo;
     public GameObject Hint_Panel;
     public Animator anim;
+    public Animator panel_transition;
+    public GameObject Transition;
 
     void Start()
     {
+        panel_transition.SetBool("isEnd", true);
         //anim = GetComponent<Animator>();
         if (sceneInfo.isGameRetried == true)
         {
             anim.SetBool("isBlink", true);
             sceneInfo.isGameRetried = false;
         }
+        StartCoroutine(DelayDestroy(Transition));
     }
 
     public void TryAgain()
@@ -41,5 +45,11 @@ public class UI : MonoBehaviour
     {
         sceneInfo.OnEnable();
         SceneManager.LoadScene("MainMenu");
+    }
+
+    private IEnumerator DelayDestroy(GameObject gameObject)
+    {
+        yield return new WaitForSeconds(2f); // Menunda selama 2 detik
+        gameObject.SetActive(false);
     }
 }

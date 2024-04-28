@@ -3912,6 +3912,80 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1738055196}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &961244481
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1132634568293535512, guid: 9ad8259b4499f2842aba417d57201d36, type: 3}
+      propertyPath: m_Name
+      value: Transition
+      objectReference: {fileID: 0}
+    - target: {fileID: 3125907772147279640, guid: 9ad8259b4499f2842aba417d57201d36, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843231498127444608, guid: 9ad8259b4499f2842aba417d57201d36, type: 3}
+      propertyPath: m_Text
+      value: Prajurit Merah
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098102054786771879, guid: 9ad8259b4499f2842aba417d57201d36, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655581434824500551, guid: 9ad8259b4499f2842aba417d57201d36, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655581434824500551, guid: 9ad8259b4499f2842aba417d57201d36, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655581434824500551, guid: 9ad8259b4499f2842aba417d57201d36, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655581434824500551, guid: 9ad8259b4499f2842aba417d57201d36, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655581434824500551, guid: 9ad8259b4499f2842aba417d57201d36, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655581434824500551, guid: 9ad8259b4499f2842aba417d57201d36, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655581434824500551, guid: 9ad8259b4499f2842aba417d57201d36, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655581434824500551, guid: 9ad8259b4499f2842aba417d57201d36, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655581434824500551, guid: 9ad8259b4499f2842aba417d57201d36, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8655581434824500551, guid: 9ad8259b4499f2842aba417d57201d36, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9ad8259b4499f2842aba417d57201d36, type: 3}
+--- !u!1 &961244482 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1132634568293535512, guid: 9ad8259b4499f2842aba417d57201d36, type: 3}
+  m_PrefabInstance: {fileID: 961244481}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &974902943
 GameObject:
   m_ObjectHideFlags: 0
@@ -4179,6 +4253,8 @@ MonoBehaviour:
   sceneInfo: {fileID: 11400000, guid: 6224db458cb650b4d81f1cc9212fef16, type: 2}
   Hint_Panel: {fileID: 949840570}
   anim: {fileID: 548791680}
+  panel_transition: {fileID: 1236601359}
+  Transition: {fileID: 961244482}
 --- !u!1 &1007110754
 GameObject:
   m_ObjectHideFlags: 0
@@ -5711,6 +5787,11 @@ Transform:
   - {fileID: 1952227993}
   m_Father: {fileID: 1349382489}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1236601359 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8632392146840886506, guid: 9ad8259b4499f2842aba417d57201d36, type: 3}
+  m_PrefabInstance: {fileID: 961244481}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1336153270 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5295586122231405360, guid: 76ff8ef44a10b794bb0f8ff177b9ca27, type: 3}
@@ -9041,6 +9122,8 @@ MonoBehaviour:
   maxHP: 100
   HP: 100
   DEF: 20
+  energy: 0
+  maxenergy: 0
   panelLose: {fileID: 593344638}
   BambuRuncing: {fileID: 919132147721366707}
   Keris: {fileID: 184965370587103947}
@@ -9048,6 +9131,7 @@ MonoBehaviour:
   Pistol: {fileID: 0}
   PedangAnggar: {fileID: 0}
   HealthBar: {fileID: 764271573}
+  EnergyBar: {fileID: 0}
   attackButtons:
   - {fileID: 652044840}
   - {fileID: 235907939}
@@ -9061,6 +9145,12 @@ MonoBehaviour:
   Skill4: {fileID: 514038475}
   Skill5: {fileID: 1134848223}
   Skill6: {fileID: 1336153270}
+  energyCost_Skill1: 0
+  energyCost_Skill2: 0
+  energyCost_Skill3: 0
+  energyCost_Skill4: 0
+  energyCost_Skill5: 0
+  energyCost_Skill6: 0
 --- !u!95 &4415102747306399380
 Animator:
   serializedVersion: 5
@@ -10458,6 +10548,7 @@ SceneRoots:
   - {fileID: 1901937929}
   - {fileID: 2016956060}
   - {fileID: 839631600}
+  - {fileID: 961244481}
   - {fileID: 991125407}
   - {fileID: 1365782693}
   - {fileID: 3895130042593496104}

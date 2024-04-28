@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class OWA : MonoBehaviour
 {
@@ -10,18 +11,44 @@ public class OWA : MonoBehaviour
     public double[] weights;
     void Start()
     {
-        // Contoh data, gantilah dengan data sesuai kebutuhan Anda
-        double[,] data = {
-            {102, 22, 7, 6, 7},
-            {101, 21, 10, 6, 4},
-            {101, 21, 4, 10, 6},
-            {101, 21, 6, 4, 10},
-            {102, 22, 8, 6, 6},
-            {102, 22, 7, 7, 6}
-        };
+        double[,] data = null;
+
+        if (SceneManager.GetActiveScene().name == "TurnBased1_OWA")
+        {
+            data = new double[,] {
+                {101, 13, 7, 6, 7, 70},
+                {101, 25, 8, 7, 6, 60},
+                {102, 12, 5, 7, 7, 10},
+                {102, 18, 6, 7, 6, 20},
+                {101, 10, 7, 8, 6, 13},
+                {102, 11, 7, 7, 5, 10}
+            };
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
+        {
+            data = new double[,] {
+                {101, 13, 7, 6, 7, 10},
+                {101, 11, 8, 7, 6, 70},
+                {102, 10, 5, 7, 7, 13},
+                {102, 12, 6, 7, 6, 10},
+                {101, 25, 7, 8, 6, 60},
+                {102, 18, 7, 7, 6, 20}
+            };
+        }
+        else if (SceneManager.GetActiveScene().name == "TurnBased3_OWA")
+        {
+            data = new double[,] {
+                {101, 25, 7, 6, 7, 60},
+                {101, 11, 8, 7, 6, 70},
+                {102, 18, 5, 7, 7, 20},
+                {102, 12, 6, 7, 6, 10},
+                {101, 10, 7, 8, 6, 13},
+                {102, 12, 7, 7, 6, 10}
+            };
+        }
 
         // Definisikan kriteria sebagai kriteria keuntungan atau biaya 1 untuk keuntungan 2 untuk biaya
-        int[] crit = { 2, 2, 1, 1, 1 };
+        int[] crit = { 2, 1, 1, 1, 1, 2 };
 
         // Menghitung TOPSIS
         double[] cc, SPIS, SNIS;
@@ -54,8 +81,8 @@ public class OWA : MonoBehaviour
 
         if (ranking[0] == 2)
         {
-            teks.text = "Saudara sedang menghadapi Jendral DeKock, disarankan untuk menggunakan Skill 2";
-        } 
+            teks.text = "Saudara sedang menghadapi Jendral DeKock, disarankan untuk menggunakan Skill 2 " + ranking[0];
+        }
         else if (ranking[0] == 3)
         {
             teks.text = "Saudara sedang menghadapi Prajurit Merah, disarankan untuk menggunakan Skill 3";
