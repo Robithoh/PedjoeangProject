@@ -9,6 +9,7 @@ public class OWA : MonoBehaviour
 {
     public Text teks;
     public double[] weights;
+    public GameObject off_skill1;
     void Start()
     {
         double[,] data = null;

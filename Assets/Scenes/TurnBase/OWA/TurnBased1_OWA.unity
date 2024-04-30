@@ -796,7 +796,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Skill 1
+  m_Text: Portal Kehidupan
 --- !u!222 &256764804
 CanvasRenderer:
   m_ObjectHideFlags: 0
