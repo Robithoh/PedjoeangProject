@@ -484,7 +484,6 @@ public class PlayerTB : MonoBehaviour
             EnemyTB enemyScript = enemy.GetComponent<EnemyTB>();
             if (enemyScript != null)
             {
-                Debug.Log("Player Menyerang");
                 float damageDealt = (ATK + ATK2 + ATK3) * dmgMulti - enemyScript.DEF;
                 damageDealt = Mathf.Max(0, damageDealt); // Pastikan damage tidak negatif
                 enemyScript.TakeDamage(damageDealt);
@@ -538,7 +537,6 @@ public class PlayerTB : MonoBehaviour
             EnemyTB enemyScript = enemy.GetComponent<EnemyTB>();
             if (enemyScript != null)
             {
-                Debug.Log("Player Menyerang");
                 float damageDealt = (ATK + ATK2 + ATK3) * dmgMulti - enemyScript.DEF;
                 damageDealt = Mathf.Max(0, damageDealt); // Pastikan damage tidak negatif
                 enemyScript.TakeDamage(damageDealt);
@@ -592,7 +590,6 @@ public class PlayerTB : MonoBehaviour
             EnemyTB enemyScript = enemy.GetComponent<EnemyTB>();
             if (enemyScript != null)
             {
-                Debug.Log("Player Menyerang");
                 float damageDealt = (ATK + ATK2 + ATK3) * dmgMulti - enemyScript.DEF;
                 damageDealt = Mathf.Max(0, damageDealt); // Pastikan damage tidak negatif
                 enemyScript.TakeDamage(damageDealt);
@@ -646,7 +643,6 @@ public class PlayerTB : MonoBehaviour
             EnemyTB enemyScript = enemy.GetComponent<EnemyTB>();
             if (enemyScript != null)
             {
-                Debug.Log("Player Menyerang");
                 float damageDealt = (ATK + ATK2 + ATK3) * dmgMulti - enemyScript.DEF;
                 damageDealt = Mathf.Max(0, damageDealt); // Pastikan damage tidak negatif
                 enemyScript.TakeDamage(damageDealt);

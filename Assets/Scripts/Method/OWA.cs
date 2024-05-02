@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.UI;
@@ -10,6 +11,9 @@ public class OWA : MonoBehaviour
     public Text teks;
     public double[] weights;
     public GameObject off_skill1;
+    public PlayerTB player;
+    private int[] ranking;
+    public Open_Hint_Panel video_check;
     void Start()
     {
         double[,] data = null;
@@ -75,22 +79,43 @@ public class OWA : MonoBehaviour
         }
 
         // Mendapatkan peringkat alternatif (dimulai dari 1)
-        int[] ranking = ArrayUtils.GetSortedIndicesDescending(cc);
+        ranking = ArrayUtils.GetSortedIndicesDescending(cc);
 
         // Menampilkan peringkat
         PrintArray("Peringkat Alternatif", ArrayUtils.AddOneToIndices(ranking));
+    }
 
-        if (ranking[0] == 2)
-        {
-            teks.text = "Saudara sedang menghadapi Jendral DeKock, disarankan untuk menggunakan Skill 2 " + ranking[0];
+    private void Update() {
+        string skill_1 = "";
+        string skill_2 = "";
+
+        if (ranking[0] == 1){
+            skill_1 = "Portal Kehidupan";
         }
-        else if (ranking[0] == 3)
-        {
-            teks.text = "Saudara sedang menghadapi Prajurit Merah, disarankan untuk menggunakan Skill 3";
+        else if (ranking[0] == 2){
+            skill_1 = "Topan Kegelapan";
         }
-        else if (ranking[0] == 4)
+        else if (ranking[0] == 5){
+            skill_1 = "Bola Meteor";
+        }
+
+        if (ranking[1] == 4){
+            skill_2 = "Bayangan Maut";
+        }
+        else if (ranking[1] == 3){
+            skill_2 = "Aura Alam";
+        }
+        else if (ranking[1] == 6){
+            skill_2 = "Cakra Emas";
+        }
+        
+        if (player.energy > 50)
         {
-            teks.text = "Saudara sedang menghadapi Prajurit Hijau, disarankan untuk menggunakan Skill 4";
+            teks.text = "Jumlah Energy anda "+ player.energy + " \nDisarankan untuk menggunakan Skill " + ranking[0] + "\n" + skill_1;
+        }
+        else if (player.energy < 50 && video_check.Video_Loading.activeSelf)
+        {
+            teks.text = "Jumlah Energy anda "+ player.energy + " \nDisarankan untuk menggunakan Skill " + ranking[1] + "\n" + skill_2;
         }
     }
 

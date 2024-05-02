@@ -47,7 +47,6 @@ public class EnemyTB : MonoBehaviour
         PlayerTB playerScript = FindObjectOfType<PlayerTB>();
         if (playerScript != null)
         {
-            Debug.Log("Nyerang");
             float damageDealt = ATK - playerScript.DEF;
             damageDealt = Mathf.Max(0, damageDealt); // Pastikan damage tidak negatif
             playerScript.TakeDamage(damageDealt);

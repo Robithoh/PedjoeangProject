@@ -10,23 +10,29 @@ public class ButtonCheck : MonoBehaviour
 
     void Update()
     {
-        if (player.energy < 50)
+        if (player.energy < player.energyCost_Skill1)
         {
-            if (SceneManager.GetActiveScene().name == "TurnBased1_OWA")
-            {
-                off_attackButtons[1].SetActive(true);
-            }
-            else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
-            { 
-
-            }
+            off_attackButtons[0].SetActive(true);
         }
-        else if (player.energy < 25)
+        if (player.energy < player.energyCost_Skill2)
         {
-            if (SceneManager.GetActiveScene().name == "TurnBased1_OWA")
-            {
-                off_attackButtons[3].SetActive(true);
-            }
+            off_attackButtons[1].SetActive(true);
+        }
+        if (player.energy < player.energyCost_Skill3)
+        {
+            off_attackButtons[2].SetActive(true);
+        }
+        if (player.energy < player.energyCost_Skill4)
+        {
+            off_attackButtons[3].SetActive(true);
+        }
+        if (player.energy < player.energyCost_Skill5)
+        {
+            off_attackButtons[4].SetActive(true);
+        }
+        if (player.energy < player.energyCost_Skill6)
+        {
+            off_attackButtons[5].SetActive(true);
         }
         
     }

@@ -11,12 +11,10 @@ public class Open_Hint_Panel : MonoBehaviour
 
     public void OpenHintPanel()
     {
+        Hint_Panel.SetActive(false);
         Video_Loading.SetActive(true);
         StartCoroutine(DelayDestroy(Video_Loading));
-        if (Hint_Panel != null)
-        {
-            Hint_Panel.SetActive(true);
-        }
+        Hint_Panel.SetActive(true);
         Panel_Anim.SetActive(false);
     }
     private IEnumerator DelayDestroy(GameObject gameObject)
