@@ -10,7 +10,6 @@ public class OWA : MonoBehaviour
 {
     public Text teks;
     public double[] weights;
-    public GameObject off_skill1;
     public PlayerTB player;
     private int[] ranking;
     public Open_Hint_Panel video_check;

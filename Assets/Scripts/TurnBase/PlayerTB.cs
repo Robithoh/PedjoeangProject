@@ -357,11 +357,11 @@ public class PlayerTB : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
         {
-            dmgMulti = 2.2f;
+            dmgMulti = 1.5f;
         }
         else if (SceneManager.GetActiveScene().name == "TurnBased3_OWA")
         {
-            dmgMulti = 1.7f;
+            dmgMulti = 3.5f;
         }
         // transform.position = new Vector3(17.139f, 0f, 7.741f);
         anim.SetBool("isCast", true);
@@ -410,11 +410,11 @@ public class PlayerTB : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
         {
-            dmgMulti = 2.2f;
+            dmgMulti = 1.5f;
         }
         else if (SceneManager.GetActiveScene().name == "TurnBased3_OWA")
         {
-            dmgMulti = 1.9f;
+            dmgMulti = 1.5f;
         }
         // transform.position = new Vector3(17.139f, 0f, 7.741f);
         anim.SetBool("isCast", true);
@@ -463,11 +463,11 @@ public class PlayerTB : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
         {
-            dmgMulti = 3.1f;
+            dmgMulti = 1.5f;
         }
         else if (SceneManager.GetActiveScene().name == "TurnBased3_OWA")
         {
-            dmgMulti = 1.7f;
+            dmgMulti = 2.3f;
         }
         // transform.position = new Vector3(17.139f, 0f, 7.741f);
         anim.SetBool("isCast", true);
@@ -516,11 +516,11 @@ public class PlayerTB : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
         {
-            dmgMulti = 2.5f;
+            dmgMulti = 1.5f;
         }
         else if (SceneManager.GetActiveScene().name == "TurnBased3_OWA")
         {
-            dmgMulti = 3.1f;
+            dmgMulti = 1.5f;
         }
         // transform.position = new Vector3(17.139f, 0f, 7.741f);
         anim.SetBool("isCast", true);
@@ -569,7 +569,7 @@ public class PlayerTB : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
         {
-            dmgMulti = 2.6f;
+            dmgMulti = 3.5f;
         }
         else if (SceneManager.GetActiveScene().name == "TurnBased3_OWA")
         {
@@ -622,11 +622,11 @@ public class PlayerTB : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().name == "TurnBased2_OWA")
         {
-            dmgMulti = 2f;
+            dmgMulti = 2.3f;
         }
         else if (SceneManager.GetActiveScene().name == "TurnBased3_OWA")
         {
-            dmgMulti = 1.2f;
+            dmgMulti = 1.5f;
         }
         // transform.position = new Vector3(17.139f, 0f, 7.741f);
         anim.SetBool("isCast", true);
