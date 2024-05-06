@@ -4544,8 +4544,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneInfo: {fileID: 11400000, guid: 6224db458cb650b4d81f1cc9212fef16, type: 2}
-  Hint_Panel: {fileID: 0}
-  anim: {fileID: 0}
+  Hint_Panel: {fileID: 548791675}
+  anim: {fileID: 548791680}
   panel_transition: {fileID: 1236601359}
   Transition: {fileID: 961244482}
 --- !u!1 &1007110754
